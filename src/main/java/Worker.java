@@ -1,19 +1,18 @@
+import helper_functions.DefaultStruct;
+import helper_functions.Gender;
 
-public class Worker {
-	private String firstName;
-
-	private Gender gender;
-
+public class Worker implements DefaultStruct {
+	public final String name;
+	private final Gender gender;
 	public int id;
 
-	public Worker(String firstName, Gender gender, int id) {
-		this.firstName = firstName;
+	public Worker(String name, Gender gender, int id) {
+		this.name = name;
 		this.gender = gender;
 		this.id = id;
 	}
 
-	public String getFullName() {
-		return firstName;
+	public void print() {
+		System.out.println(name);
 	}
-
 }

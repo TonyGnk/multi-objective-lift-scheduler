@@ -1,6 +1,11 @@
+import helper_functions.Gender
 
-class WorkSet {
-    private var potentialValues: List<Worker> = listOf(
+// In this project the Java code is converted to Kotlin to run using the Kotlin compiler.
+// If you have greek characters inside the java file and run the kotlin compiler, the letters will be converted to question marks.
+// Because of this, I create this kotlin function to handle the greek characters and return the workers list.
+// @TonyGnk
+fun getWorkers() : List<Worker> {
+    return listOf(
         Worker("Μαυροκεφαλίδου", Gender.FEMALE, 1),
         Worker("Γιαννακοβίτης", Gender.MALE, 2),
         Worker("Καρυτόπουλος", Gender.MALE, 3),
@@ -14,29 +19,4 @@ class WorkSet {
         Worker("Μαλλού", Gender.FEMALE, 11),
         Worker("Χατζοπούλου", Gender.FEMALE, 12)
     )
-
-    fun printVariable() {
-        val names = potentialValues.joinToString(" ") { it.fullName }
-        println(names)
-    }
-
-    fun hasOnlyOneValue(): Boolean {
-        return potentialValues.size == 1
-    }
-
-    fun singleMemberId(): Int {
-        return potentialValues[0].id
-    }
-
-    fun removeWorker(id: Int) {
-        potentialValues = potentialValues.filter { it.id != id }
-    }
-
-    fun removeAllExcept(id: Int) {
-        potentialValues = potentialValues.filter { it.id == id }
-    }
-
-    fun workerExists(id: Int): Boolean {
-        return potentialValues.any { it.id == id }
-    }
 }
