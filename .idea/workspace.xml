@@ -7,22 +7,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27387b15-b6e2-43e2-a841-5c78a54b4ff0" name="Changes" comment="First Commit">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Range.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Week.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/helper_functions/DefaultStruct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/GetWorkers.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/test_rules/testRl1.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/RangeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Gender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper_functions/Gender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Search.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WorkTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sift.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Worker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/WorkSet.kt" beforeDir="false" />
+    <list default="true" id="27387b15-b6e2-43e2-a841-5c78a54b4ff0" name="Changes" comment="Add support for the first rule ApplyOneWorkerInSift">
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/test_rules/testRl1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/test_rules/testRl1.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +174,7 @@
       <updated>1709131847307</updated>
       <workItem from="1709131848487" duration="2131000" />
       <workItem from="1709134789059" duration="10249000" />
-      <workItem from="1709154199413" duration="3999000" />
+      <workItem from="1709154199413" duration="4256000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <option name="closed" value="true" />
@@ -206,7 +192,23 @@
       <option name="project" value="LOCAL" />
       <updated>1709134324865</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Create the foundation of the project">
+      <option name="closed" value="true" />
+      <created>1709158370329</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709158370329</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add support for the first rule ApplyOneWorkerInSift">
+      <option name="closed" value="true" />
+      <created>1709158412744</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1709158412744</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -223,7 +225,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit" />
     <MESSAGE value="First Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First Commit" />
+    <MESSAGE value="Create the foundation of the project" />
+    <MESSAGE value="Add support for the first rule ApplyOneWorkerInSift" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add support for the first rule ApplyOneWorkerInSift" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

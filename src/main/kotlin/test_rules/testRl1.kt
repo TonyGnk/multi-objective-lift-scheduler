@@ -2,9 +2,9 @@ package test_rules
 
 import Sift
 
+// This is a test of how the limit RL-1 is applied
 fun test1ApplyOneWorkerInSift() {
 
-    // This is a test of how the limit RL-1 is applied
     //? Δε γίνεται ένας εργαζόμενος να καλύπτει δύο θέσεις σε μια βάρδια
 
     //> Δημιουργούμε μια νέα βάρδια που θα έχει 3 θέσεις (Όπως η πρωινή βάρδια)
