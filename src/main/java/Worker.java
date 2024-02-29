@@ -3,8 +3,8 @@ import helper_functions.Gender;
 
 public class Worker implements DefaultStruct {
 	public final String name;
+	public final int id;
 	private final Gender gender;
-	public int id;
 
 	public Worker(String name, Gender gender, int id) {
 		this.name = name;

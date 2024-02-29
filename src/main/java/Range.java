@@ -25,10 +25,19 @@ public class Range implements DefaultStruct {
 				.collect(Collectors.toList());
 	}
 
-	public void removeAllWorkersExcept(int idToStay) {
-		workers = workers.stream()
-				.filter(worker -> worker.id == idToStay)
+	//? New method
+	public boolean canBeFixedWorker(int id) {
+		return GetWorkLimitsKt.getWorkLimit().get(id) > 0;
+	}
+
+	public void setFixedWorker(int fixedWorkerId) {
+		workers = workers
+				.stream().filter(worker -> worker.id == fixedWorkerId)
 				.collect(Collectors.toList());
+		int currentTimes = GetWorkLimitsKt.getWorkLimit().get(fixedWorkerId);
+		GetWorkLimitsKt.getWorkLimit().set(fixedWorkerId, currentTimes - 1);
+
+		//
 	}
 
 	public boolean workerExists(int id) {

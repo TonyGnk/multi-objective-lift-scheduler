@@ -4,23 +4,32 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Sift implements DefaultStruct {
-	private List<Range> ranges;
+	private final List<Range> ranges = new ArrayList<>();
+	private int day;
 
-	public Sift(int numberOfRanges) {
-		this.ranges = new ArrayList<>();
+	public Sift(int day, int numberOfRanges) {
 		for (int i = 0; i < numberOfRanges; i++) {
 			this.ranges.add(new Range());
 			this.day = day;
 		}
 	}
 
-	public void removeAllWorkersInAnyNotFixedRangeExcept(int workerId) {
+	public void setWorkerInAnyNotFixedRange(int workerId) {
 		for (Range range : ranges) {
 			if (!range.isFixed()) {
-				range.removeAllWorkersExcept(workerId);
+				range.setFixedWorker(workerId);
 				break;
 			}
 		}
+	}
+
+	public boolean canSetWorkerInAnyNotFixedRange(int workerId) {
+		for (Range range : ranges) {
+			if (!range.isFixed() && range.canBeFixedWorker(workerId)) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	public void applyOneWorkerInSift() {
@@ -69,6 +78,6 @@ public class Sift implements DefaultStruct {
 		for (Range range : ranges) {
 			range.print();
 		}
-		System.out.println();
+		System.out.println();//\n
 	}
 }
