@@ -10,6 +10,7 @@ public class Sift implements DefaultStruct {
 		this.ranges = new ArrayList<>();
 		for (int i = 0; i < numberOfRanges; i++) {
 			this.ranges.add(new Range());
+			this.day = day;
 		}
 	}
 
@@ -40,6 +41,28 @@ public class Sift implements DefaultStruct {
 				otherRange.removeWorker(idOfFixedWorker);
 			}
 		}
+	}
+
+	public void removeWorkersFromSecondShift(List<Sift> solutionList) {
+		List<Integer> tempWorkersIDs = new ArrayList<>();
+		for (Range range : this.ranges) {
+			if (range.isFixed()) {
+				tempWorkersIDs.add(range.getFirstWorkerId());
+			}
+		}
+		for (Sift sift : solutionList) {
+			if (sift.day == this.day && sift.ranges.size() + 1 == this.ranges.size()) {
+				for (Range range : sift.ranges) {
+					for (Integer id : tempWorkersIDs) {
+						range.removeWorker(id);
+					}
+				}
+			}
+		}
+	}
+
+	public List<Range> getlistOfRanges() {
+		return this.ranges;
 	}
 
 	public void print() {
