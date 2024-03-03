@@ -7,11 +7,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27387b15-b6e2-43e2-a841-5c78a54b4ff0" name="Changes" comment="Implement a new WeekPrinter.kt function for better visualization">
+    <list default="true" id="27387b15-b6e2-43e2-a841-5c78a54b4ff0" name="Changes" comment="Apply new print methods to RL-1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sift.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/test_rules/testRL3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/test_rules/testRL3.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/WeekPrinter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/WeekPrinter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/test_rules/testRL2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/test_rules/testRL2.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/test_rules/testRl1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/test_rules/testRl1.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -198,7 +198,7 @@
       <workItem from="1709134789059" duration="10249000" />
       <workItem from="1709154199413" duration="4877000" />
       <workItem from="1709208211317" duration="13005000" />
-      <workItem from="1709487741127" duration="11940000" />
+      <workItem from="1709487741127" duration="12705000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <option name="closed" value="true" />
@@ -272,7 +272,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709498693954</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Apply new print methods to RL-1">
+      <option name="closed" value="true" />
+      <created>1709499778463</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1709499778463</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -295,7 +303,8 @@
     <MESSAGE value="Implementation of the RL-3" />
     <MESSAGE value="Implementation of the RL-2" />
     <MESSAGE value="Implement a new WeekPrinter.kt function for better visualization" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement a new WeekPrinter.kt function for better visualization" />
+    <MESSAGE value="Apply new print methods to RL-1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Apply new print methods to RL-1" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

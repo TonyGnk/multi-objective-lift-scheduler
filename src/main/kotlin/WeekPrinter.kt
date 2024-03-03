@@ -29,4 +29,5 @@ fun weekPrinter(weekList : MutableList<Sift>) {
             printColorMap[siftType]?.invoke(sb.toString())
         }
     }
+    println()
 }
