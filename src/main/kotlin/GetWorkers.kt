@@ -6,17 +6,35 @@ import helper_functions.Gender
 // @TonyGnk
 fun getWorkers() : List<Worker> {
     return listOf(
-        Worker("Μαυροκεφαλίδου", Gender.FEMALE, 1),
-        Worker("Γιαννακοβίτης", Gender.MALE, 2),
-        Worker("Καρυτόπουλος", Gender.MALE, 3),
-        Worker("Σιδηρόπουλος", Gender.MALE, 4),
-        Worker("Στογιάννου", Gender.MALE, 5),
-        Worker("Γραμμένας", Gender.MALE, 6),
-        Worker("Παπαστεγίου", Gender.MALE, 7),
-        Worker("Συροπούλου", Gender.FEMALE, 8),
-        Worker("Βασιλειάδη", Gender.MALE, 9),
-        Worker("Λουκίδου", Gender.FEMALE, 10),
-        Worker("Μαλλού", Gender.FEMALE, 11),
-        Worker("Χατζοπούλου", Gender.FEMALE, 12)
+        Worker("Μαυροκεφαλίδου", Gender.FEMALE, 0),
+        Worker("Γιαννακοβίτης", Gender.MALE, 1),
+        Worker("Καρυτόπουλος", Gender.MALE, 2),
+        Worker("Σιδηρόπουλος", Gender.MALE, 3),
+        Worker("Στογιάννου", Gender.MALE, 4),
+        Worker("Γραμμένας", Gender.MALE, 5),
+        Worker("Παπαστεγίου", Gender.MALE, 6),
+        Worker("Συροπούλου", Gender.FEMALE, 7),
+        Worker("Βασιλειάδη", Gender.MALE, 8),
+        Worker("Λουκίδου", Gender.FEMALE, 9),
+        Worker("Μαλλού", Gender.FEMALE, 10),
+        Worker("Χατζοπούλου", Gender.FEMALE, 11)
     )
 }
+
+val printColorMap = mapOf(0 to ::printBlue, 1 to ::printOrange, 2 to ::printDefault)
+
+private fun printBlue(text : String) {
+    println("\u001B[34m$text")
+}
+
+private fun printOrange(text : String) {
+    println("\u001B[33m$text")
+}
+
+private fun printDefault(text : String) {
+    println("\u001B[0m$text")
+}
+
+//private fun printDarkGreen(text : String) {
+//    println("\u001B[32m$text")
+//}

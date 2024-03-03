@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Sift implements DefaultStruct {
-	private final List<Range> ranges = new ArrayList<>();
+	public final List<Range> ranges = new ArrayList<>();
 	private int day;
 
 	public Sift(int day, int numberOfRanges) {
@@ -68,10 +68,6 @@ public class Sift implements DefaultStruct {
 				}
 			}
 		}
-	}
-
-	public List<Range> getlistOfRanges() {
-		return this.ranges;
 	}
 
 	public void print() {

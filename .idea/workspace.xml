@@ -7,23 +7,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27387b15-b6e2-43e2-a841-5c78a54b4ff0" name="Changes" comment="">
-      <changelist_data name="Permalized" email="iis21032@uom.edu.gr" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/getWorkLimits.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/test_rules/testRL2.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/test_rules/testRL3.kt" afterDir="false" />
+    <list default="true" id="27387b15-b6e2-43e2-a841-5c78a54b4ff0" name="Changes" comment="Implementation of the RL-2">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/WeekPrinter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Range.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Range.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Sift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sift.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Week.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Worker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/GetWorkers.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/GetWorkers.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/test_rules/testRl1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/test_rules/testRl1.kt" afterDir="false" />
-    </list>
-    <list id="fb5b146e-ff1d-491b-ae5d-ee027b66aab5" name="Changes by nicko" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sift.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/test_rules/testRl1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/test_rules/testRl1.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/getWorkLimits.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/getWorkLimits.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,8 +46,8 @@
         <option value="Interface" />
         <option value="JUnit5 Test Class" />
         <option value="package-info" />
-        <option value="Class" />
         <option value="Kotlin Class" />
+        <option value="Class" />
         <option value="Kotlin File" />
       </list>
     </option>
@@ -68,6 +61,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="TonyGnk &lt;iis22067@uom.edu.gr&gt;" />
         <option value="Permalized &lt;iis21032@uom.edu.gr&gt;" />
       </list>
     </option>
@@ -87,33 +81,8 @@
       </UrlAndAccount>
     </option>
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/kotlin/test_rules/testRl1.kt">
-      <ranges>
-        <range start1="10" end1="11" start2="10" end2="11" changelist="fb5b146e-ff1d-491b-ae5d-ee027b66aab5" />
-        <range start1="16" end1="18" start2="16" end2="18" changelist="27387b15-b6e2-43e2-a841-5c78a54b4ff0" />
-        <range start1="20" end1="21" start2="20" end2="22" changelist="27387b15-b6e2-43e2-a841-5c78a54b4ff0" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/kotlin/Main.kt">
-      <ranges>
-        <range start1="1" end1="1" start2="1" end2="3" changelist="fb5b146e-ff1d-491b-ae5d-ee027b66aab5" />
-        <range start1="3" end1="3" start2="5" end2="6" changelist="27387b15-b6e2-43e2-a841-5c78a54b4ff0" />
-        <range start1="4" end1="4" start2="7" end2="16" changelist="27387b15-b6e2-43e2-a841-5c78a54b4ff0" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/Sift.java">
-      <ranges>
-        <range start1="6" end1="7" start2="6" end2="8" changelist="27387b15-b6e2-43e2-a841-5c78a54b4ff0" />
-        <range start1="8" end1="10" start2="9" end2="10" changelist="27387b15-b6e2-43e2-a841-5c78a54b4ff0" />
-        <range start1="12" end1="12" start2="12" end2="13" changelist="fb5b146e-ff1d-491b-ae5d-ee027b66aab5" />
-        <range start1="15" end1="16" start2="16" end2="17" changelist="27387b15-b6e2-43e2-a841-5c78a54b4ff0" />
-        <range start1="18" end1="19" start2="19" end2="20" changelist="27387b15-b6e2-43e2-a841-5c78a54b4ff0" />
-        <range start1="23" end1="23" start2="24" end2="33" changelist="27387b15-b6e2-43e2-a841-5c78a54b4ff0" />
-        <range start1="44" end1="44" start2="54" end2="76" changelist="fb5b146e-ff1d-491b-ae5d-ee027b66aab5" />
-        <range start1="48" end1="49" start2="80" end2="81" changelist="27387b15-b6e2-43e2-a841-5c78a54b4ff0" />
-      </ranges>
-    </file>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/Week.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -154,11 +123,17 @@
     "project.structure.side.proportion": "0.2",
     "rearrange.code.on.save": "true",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.editor"
+    "settings.editor.selected.configurable": "preferences.sourceCode.Markdown"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="helper_functions" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
@@ -226,7 +201,8 @@
       <workItem from="1709131848487" duration="2131000" />
       <workItem from="1709134789059" duration="10249000" />
       <workItem from="1709154199413" duration="4877000" />
-      <workItem from="1709208211317" duration="12787000" />
+      <workItem from="1709208211317" duration="13005000" />
+      <workItem from="1709487741127" duration="10573000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <option name="closed" value="true" />
@@ -276,7 +252,23 @@
       <option name="project" value="LOCAL" />
       <updated>1709158602542</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Implementation of the RL-3">
+      <option name="closed" value="true" />
+      <created>1709223396516</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1709223396516</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Implementation of the RL-2">
+      <option name="closed" value="true" />
+      <created>1709223413095</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1709223413095</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -296,7 +288,9 @@
     <MESSAGE value="Create the foundation of the project" />
     <MESSAGE value="Add support for the first rule ApplyOneWorkerInSift" />
     <MESSAGE value="HotFix" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="Implementation of the RL-3" />
+    <MESSAGE value="Implementation of the RL-2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementation of the RL-2" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

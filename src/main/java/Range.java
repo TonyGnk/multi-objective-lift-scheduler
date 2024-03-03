@@ -44,11 +44,39 @@ public class Range implements DefaultStruct {
 		return workers.stream().anyMatch(worker -> worker.id == id);
 	}
 
+	public String workerNamesInOneLine() {
+		StringBuilder workerNamesInOneLine = new StringBuilder();
+		for (Worker worker : workers) {
+			workerNamesInOneLine.append(worker.id).append(" ");
+		}
+		return workerNamesInOneLine.toString();
+	}
+
 	public void print() {
 		StringBuilder workerNamesInOneLine = new StringBuilder();
 		for (Worker worker : workers) {
-			workerNamesInOneLine.append(worker.name).append(" ");
+			workerNamesInOneLine.append(worker.id).append(" ");
 		}
 		System.out.println(workerNamesInOneLine);
+	}
+
+	public void printNew() {
+		System.out.println(returnNew());
+	}
+
+	public String returnNew() {
+		StringBuilder workerNamesInOneLine = new StringBuilder();
+		for (int i = 0; i < GetWorkersKt.getWorkers().size(); i++) {
+			if (workerExists(i)) {
+				workerNamesInOneLine.append(i);
+			} else {
+				int idInStringSize = Integer.toString(i).length();
+				workerNamesInOneLine.append(" ".repeat(idInStringSize));
+			}
+			if (i != GetWorkersKt.getWorkers().size() - 1) {
+				workerNamesInOneLine.append(" ");
+			}
+		}
+		return workerNamesInOneLine.toString();
 	}
 }

@@ -13,6 +13,6 @@ public class Worker implements DefaultStruct {
 	}
 
 	public void print() {
-		System.out.println(name);
+		System.out.println(id);
 	}
 }
