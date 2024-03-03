@@ -76,4 +76,11 @@ public class Sift implements DefaultStruct {
 		}
 		System.out.println();//\n
 	}
+
+	public void printNew() {
+		for (Range range : ranges) {
+			range.printNew();
+		}
+		System.out.println();//\n
+	}
 }
