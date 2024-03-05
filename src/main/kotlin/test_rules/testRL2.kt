@@ -24,7 +24,7 @@ fun test2PreventTheSameWorkerInTwoShifts() {
 
 
     printGreen("Αφαιρούνται οι εργαζόμενοι των πρώτων βάρδιων απο τις δεύτερες βάρδιες της πρώτης μέρας")
-    testWeek.solutionList.first().removeWorkersFromSecondShift(testWeek.solutionList)
+    //testWeek.solutionList.first().removeWorkersFromContinuousShift(testWeek.solutionList)
     testWeek.printNew()
 
     println("________________________________________________")

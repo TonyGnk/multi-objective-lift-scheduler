@@ -4,55 +4,63 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Week implements DefaultStruct {
-	private final List<Sift> solutionList = new ArrayList<>();
+    private final List<Sift> solutionList = new ArrayList<>();
 
-	public Week(Integer days) {
+    public Week(Integer days) {
 
-		for (int i = 0; i < days; i++) {
-			this.solutionList.add(new Sift(i, 3));
-			this.solutionList.add(new Sift(i, 2));
-			this.solutionList.add(new Sift(i, 1));
-		}
-	}
+        for (int i = 0; i < days; i++) {
+            this.solutionList.add(new Sift(i, 3));
+            this.solutionList.add(new Sift(i, 2));
+            this.solutionList.add(new Sift(i, 1));
+        }
+    }
 
-	public Week() {
+    public Week() {
 
-		for (int i = 0; i < 5; i++) {
-			this.solutionList.add(new Sift(i, 3));
-			this.solutionList.add(new Sift(i, 2));
-			this.solutionList.add(new Sift(i, 1));
-		}
-		for (int i = 0; i < 2; i++) {
-			this.solutionList.add(new Sift(i, 2));
-			this.solutionList.add(new Sift(i, 2));
-			this.solutionList.add(new Sift(i, 1));
-		}
-	}
+        for (int i = 0; i < 5; i++) {
+            this.solutionList.add(new Sift(i, 3));
+            this.solutionList.add(new Sift(i, 2));
+            this.solutionList.add(new Sift(i, 1));
+        }
+        for (int i = 0; i < 2; i++) {
+            this.solutionList.add(new Sift(i, 2));
+            this.solutionList.add(new Sift(i, 2));
+            this.solutionList.add(new Sift(i, 1));
+        }
+    }
 
-	public List<Sift> getSolutionList() {
-		return solutionList;
-	}
+    public boolean CheckForUnsolvableWeek() {
+        for (Sift sift : this.getSolutionList()) {
+            if (sift.hasEmptyRange()) return true;
+        }
+        return false;
 
-	public void print() {
-		for (int i = 0; i < solutionList.size(); i++) {
-			//In every 3 I print 1
-			if (i % 3 == 0) {
-				System.out.println("Day " + (i / 3 + 1));
-				System.out.println("Morning");
-			}
-			if ((i - 1) % 3 == 0) {
+    }
 
-				System.out.println("Evening");
-			}
-			if ((i - 2) % 3 == 0) {
+    public List<Sift> getSolutionList() {
+        return solutionList;
+    }
 
-				System.out.println("Night");
-			}
-			solutionList.get(i).print();
-		}
-	}
+    public void print() {
+        for (int i = 0; i < solutionList.size(); i++) {
+            //In every 3 I print 1
+            if (i % 3 == 0) {
+                System.out.println("Day " + (i / 3 + 1));
+                System.out.println("Morning");
+            }
+            if ((i - 1) % 3 == 0) {
 
-	public void printNew() {
-		WeekPrinterKt.weekPrinter(solutionList);
-	}
+                System.out.println("Evening");
+            }
+            if ((i - 2) % 3 == 0) {
+
+                System.out.println("Night");
+            }
+            solutionList.get(i).print();
+        }
+    }
+
+    public void printNew() {
+        WeekPrinterKt.weekPrinter(solutionList);
+    }
 }
