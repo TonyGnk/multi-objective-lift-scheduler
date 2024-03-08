@@ -36,12 +36,6 @@ public class Sift implements DefaultStruct {
     }
 
     private boolean existAtLeastOneGender() {
-        //Η φάση είναι ότι τώρα ελέγχοι το σύνολο για άνδρες/γυναίκες πριν γίνει το σετάρισμα
-        // Έστω ότι ζητάμε να μπει άνδρας στην πρώτη θέση
-        // Έχουν μείνει στην θέση 2 ένας άνδρας και μια γυναίκα
-        // Η πρώτη θέση θα έχει μια γυναίκα
-        // 2 θέσεις στην βάρδια
-        //Θα δώσει true αλλά αν βάλουμε στην
         boolean existMale = false;
         boolean existFemale = false;
         for (Range currentRange : ranges) {
@@ -133,6 +127,7 @@ public class Sift implements DefaultStruct {
 
                 int randomIndex = (int) (Math.random() * seniorWorkers.size());
                 range.setFixedWorker(seniorWorkers.get(randomIndex).id);
+                //seniorWorkers.get(randomIndex).id
                 //LP1
                 applyOneWorkerInSift();
                 //LP2

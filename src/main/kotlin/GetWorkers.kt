@@ -27,6 +27,7 @@ public var latestId: Int = -1
 
 public fun getWorkersLatestId(): Int {
     latestId++
+    if (latestId == 12) latestId = 0
     return latestId;
 }
 
