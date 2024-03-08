@@ -8,7 +8,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27387b15-b6e2-43e2-a841-5c78a54b4ff0" name="Changes" comment="New Enum Worker Type" />
+    <list default="true" id="27387b15-b6e2-43e2-a841-5c78a54b4ff0" name="Changes" comment="Implementation of Rule 4">
+      <changelist_data name="Permalized" email="iis21032@uom.edu.gr" />
+      <change afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/blobs/version" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/test_rules/testRL4.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Range.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Range.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sift.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Week.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WeekScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WeekScheduler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Worker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper_functions/WorkerType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper_functions/WorkerType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/GetWorkers.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/GetWorkers.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/WeekPrinter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/WeekPrinter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/test_rules/testRL2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/test_rules/testRL2.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/test_rules/testRL3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/test_rules/testRL3.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/test_rules/testRl1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/test_rules/testRl1.kt" afterDir="false" />
+    </list>
+    <list id="543a6ecb-941b-49ff-8c33-81df78af4b0b" name="Changes by TonyGnk" comment="Changes by TonyGnk" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,7 +43,17 @@
         <task path="$PROJECT_DIR$">
           <activation />
         </task>
-        <projects_view />
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="multi-objective-lift-scheduler" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
   </component>
@@ -37,9 +65,9 @@
         <option value="package-info" />
         <option value="Kotlin Class" />
         <option value="Class" />
-        <option value="Kotlin File" />
         <option value="JUnit5 Test Class" />
         <option value="Enum" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -52,8 +80,8 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
-        <option value="TonyGnk &lt;iis22067@uom.edu.gr&gt;" />
         <option value="Permalized &lt;iis21032@uom.edu.gr&gt;" />
+        <option value="TonyGnk &lt;iis22067@uom.edu.gr&gt;" />
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -116,7 +144,7 @@
     "project.structure.side.proportion": "0.2",
     "rearrange.code.on.save": "true",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "CodeWithMe"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -368,7 +396,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709908832498</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="New Enum Worker Type">
+      <option name="closed" value="true" />
+      <created>1709908939644</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1709908939644</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -395,7 +431,9 @@
     <MESSAGE value="Apply new print methods to RL-2" />
     <MESSAGE value="New class WeekScheduler&#10;New methods in classes: Week,Sift&#10;New test for Scheduler applying LP1-LP2" />
     <MESSAGE value="New Enum Worker Type" />
-    <option name="LAST_COMMIT_MESSAGE" value="New Enum Worker Type" />
+    <MESSAGE value="Changes by TonyGnk" />
+    <MESSAGE value="Implementation of Rule 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementation of Rule 4" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

@@ -5,13 +5,15 @@ import helper_functions.WorkerType;
 public class Worker implements DefaultStruct {
     public final String name;
     public final int id;
-    private final WorkerType type;
-    private final Gender gender;
+    public final WorkerType type;
+    public final Gender gender;
 
-    public Worker(String name, Gender gender, WorkerType type, int id) {
+    public Worker(String name, Gender gender, WorkerType type) {
+        int latestId = GetWorkersKt.getWorkersLatestId();
+
         this.name = name;
         this.gender = gender;
-        this.id = id;
+        this.id = latestId;
         this.type = type;
     }
 

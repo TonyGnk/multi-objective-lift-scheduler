@@ -1,7 +1,9 @@
 import helper_functions.DefaultStruct;
+import helper_functions.Gender;
 
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class Sift implements DefaultStruct {
     public final List<Range> ranges = new ArrayList<>();
@@ -13,6 +15,7 @@ public class Sift implements DefaultStruct {
             this.day = day;
         }
     }
+    //generate a random worker for a range
 
     public void setWorkerInAnyNotFixedRange(int workerId) {
         for (Range range : ranges) {
@@ -30,6 +33,27 @@ public class Sift implements DefaultStruct {
             }
         }
         return false;
+    }
+
+    private boolean existAtLeastOneGender() {
+        //Η φάση είναι ότι τώρα ελέγχοι το σύνολο για άνδρες/γυναίκες πριν γίνει το σετάρισμα
+        // Έστω ότι ζητάμε να μπει άνδρας στην πρώτη θέση
+        // Έχουν μείνει στην θέση 2 ένας άνδρας και μια γυναίκα
+        // Η πρώτη θέση θα έχει μια γυναίκα
+        // 2 θέσεις στην βάρδια
+        //Θα δώσει true αλλά αν βάλουμε στην
+        boolean existMale = false;
+        boolean existFemale = false;
+        for (Range currentRange : ranges) {
+            if (currentRange.genderExists(Gender.MALE)) {
+                existMale = true;
+            }
+            if (currentRange.genderExists(Gender.FEMALE)) {
+                existFemale = true;
+            }
+        }
+        return existFemale && existMale;
+
     }
 
     public void applyOneWorkerInSift() {
@@ -99,9 +123,27 @@ public class Sift implements DefaultStruct {
 
                 break;
             }
-
-
         }
+    }
+
+    public void setRandomSeniorWorkerInRadomRangeOfMorningSift(int positionInWeek) {
+        for (Range range : ranges) {
+            if (!range.isFixed() && range.seniorWorkerExists()) {
+                List<Worker> seniorWorkers = range.returnSeniorWorkers();
+
+                int randomIndex = (int) (Math.random() * seniorWorkers.size());
+                range.setFixedWorker(seniorWorkers.get(randomIndex).id);
+                //LP1
+                applyOneWorkerInSift();
+                //LP2
+                CheckIfSiftIsLastOfWeekAndApplyLP2(positionInWeek);
+                break;
+
+
+            }
+        }
+
+
     }
 
     public boolean hasEmptyRange() {
@@ -112,16 +154,10 @@ public class Sift implements DefaultStruct {
         return false;
     }
 
+
     public void print() {
         for (Range range : ranges) {
             range.print();
-        }
-        System.out.println();//\n
-    }
-
-    public void printNew() {
-        for (Range range : ranges) {
-            range.printNew();
         }
         System.out.println();//\n
     }

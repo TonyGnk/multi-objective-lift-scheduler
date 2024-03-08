@@ -7,22 +7,31 @@ import helper_functions.WorkerType
 // @TonyGnk
 fun getWorkers(): List<Worker> {
     return listOf(
-        Worker("Μαυροκεφαλίδου", Gender.FEMALE, WorkerType.STAFF, 0),
-        Worker("Γιαννακοβίτης", Gender.MALE, WorkerType.SU, 1),
-        Worker("Καρυτόπουλος", Gender.MALE, WorkerType.SENIOR, 2),
-        Worker("Σιδηρόπουλος", Gender.MALE, WorkerType.SENIOR, 3),
-        Worker("Στογιάννου", Gender.MALE, WorkerType.SENIOR, 4),
-        Worker("Γραμμένας", Gender.MALE, WorkerType.STAFF, 5),
-        Worker("Παπαστεγίου", Gender.MALE, WorkerType.STAFF, 6),
-        Worker("Συροπούλου", Gender.FEMALE, WorkerType.STAFF, 7),
-        Worker("Βασιλειάδη", Gender.MALE, WorkerType.STAFF, 8),
-        Worker("Λουκίδου", Gender.FEMALE, WorkerType.STAFF, 9),
-        Worker("Μαλλού", Gender.FEMALE, WorkerType.STAFF, 10),
-        Worker("Χατζοπούλου", Gender.FEMALE, WorkerType.STAFF, 11)
+        // SU: 0, Seniors: 1,2,3
+        Worker("Γιαννακοβίτης", Gender.MALE, WorkerType.SU),
+        Worker("Καρυτόπουλος", Gender.MALE, WorkerType.SENIOR),
+        Worker("Σιδηρόπουλος", Gender.MALE, WorkerType.SENIOR),
+        Worker("Στογιάννου", Gender.MALE, WorkerType.SENIOR),
+        Worker("Μαυροκεφαλίδου", Gender.FEMALE, WorkerType.STAFF),
+        Worker("Γραμμένας", Gender.MALE, WorkerType.STAFF),
+        Worker("Παπαστεγίου", Gender.MALE, WorkerType.STAFF),
+        Worker("Συροπούλου", Gender.FEMALE, WorkerType.STAFF),
+        Worker("Βασιλειάδη", Gender.MALE, WorkerType.STAFF),
+        Worker("Λουκίδου", Gender.FEMALE, WorkerType.STAFF),
+        Worker("Μαλλού", Gender.FEMALE, WorkerType.STAFF),
+        Worker("Χατζοπούλου", Gender.FEMALE, WorkerType.STAFF)
     )
 }
 
+public var latestId: Int = -1
+
+public fun getWorkersLatestId(): Int {
+    latestId++
+    return latestId;
+}
+
 val printColorMap = mapOf(0 to ::printBlue, 1 to ::printOrange, 2 to ::printDef)
+
 
 public fun printBlue(text: String) {
     println("\u001B[34m$text")

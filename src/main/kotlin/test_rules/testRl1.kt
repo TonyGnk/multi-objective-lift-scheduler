@@ -15,12 +15,12 @@ fun test1ApplyOneWorkerInSift() {
     printGreen("Γίνεται ανάθεση των θέσεων 1 και 2 σε δύο εργαζόμενους")
     sift.setWorkerInAnyNotFixedRange(2)
     sift.setWorkerInAnyNotFixedRange(5)
-    sift.printNew() //!Πρόβλημα
+    sift.print() //!Πρόβλημα
 
 
     printGreen("Εφαρμόζουμε τον περιορισμό και βλέπουμε ότι στη θέση 3 αφαιρέθηκαν οι εργαζόμενοι που ορίστηκαν στις άλλες θέσεις")
     sift.applyOneWorkerInSift()
-    sift.printNew()
+    sift.print()
 
     println("________________________________________________")
 }

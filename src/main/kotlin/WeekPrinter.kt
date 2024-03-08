@@ -1,4 +1,4 @@
-fun weekPrinter(weekList : MutableList<Sift>) {
+fun weekPrinter(weekList: MutableList<Sift>) {
 
     // Repeat 3 times
     for (siftType in 0..2) {
@@ -15,7 +15,7 @@ fun weekPrinter(weekList : MutableList<Sift>) {
 
             // For each range, we create a row with "|"
             for (j in weekList[i].ranges.indices) {
-                listSB[j].append(weekList[i].ranges[j].returnNew())
+                listSB[j].append(weekList[i].ranges[j].getAllNames())
                 //if j is in last index of the list, we don't append "|"
                 if (i + 3 < weekList.size) {
                     listSB[j].append("|")

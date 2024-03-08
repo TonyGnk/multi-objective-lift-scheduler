@@ -4,7 +4,7 @@ public class WeekScheduler {
     public static Week CurrentWeek;
 
     public WeekScheduler() {
-        this.CurrentWeek = new Week();
+        CurrentWeek = new Week();
     }
 
     public Week ProgrammGenerator() {
@@ -13,6 +13,7 @@ public class WeekScheduler {
         List<Sift> SiftsList = CurrentWeek.getSolutionList();
         //When i=SolutionList.size then every sift has a worker
         while (i < SiftsList.size()) {
+            checkForMorningSiftAndApplyLP5(i, SiftsList.get(i));
             if (SiftsList.get(i).isSet()) {
                 i++;
             } else {
@@ -21,12 +22,10 @@ public class WeekScheduler {
                     SiftsList.get(i).setRandomWorkerInAnyNotFixedRangeAndApplyLPs(i);
                     //Apply LP2
                     //If there is a range that is empty restart the process
-                    if (this.CurrentWeek.CheckForUnsolvableWeek()) {
+                    if (CurrentWeek.CheckForUnsolvableWeek()) {
                         System.out.println("Unsolvable situation");
                         i = 0;
                         SiftsList = initialWeek.getSolutionList();
-
-
                     }
                 }
 
@@ -34,6 +33,10 @@ public class WeekScheduler {
 
         }
         return CurrentWeek;
+    }
+
+    public void checkForMorningSiftAndApplyLP5(int positionInWeek, Sift MorningSift) {
+        if (positionInWeek % 3 == 0) MorningSift.setRandomSeniorWorkerInRadomRangeOfMorningSift(positionInWeek);
     }
 
 //    public Week try1(List<Sift> SiftsList, int i, Week initialWeek) {
@@ -56,6 +59,15 @@ public class WeekScheduler {
 
 }
 
+/*
+ * Έστω ότι ξεκινάει πρώτη μεταβλητή και βάζει τυχαία μεταβλητή 06 = 0
+ * Αν όλοι ισχυούν
+ * 11 Αν όλοι
+ *
+ *
+ * Α. Μη Τυχαίες
+ *
+ * */
 
 
 
