@@ -1,7 +1,7 @@
 import java.util.List;
 
 public class WeekScheduler {
-    private Week CurrentWeek;
+    public static Week CurrentWeek;
 
     public WeekScheduler() {
         this.CurrentWeek = new Week();
@@ -18,11 +18,8 @@ public class WeekScheduler {
             } else {
                 while (!SiftsList.get(i).isSet()) {
                     //Set a Worker in a Sift and apply LP1
-                    SiftsList.get(i).setRandomWorkerInAnyNotFixedRange();
+                    SiftsList.get(i).setRandomWorkerInAnyNotFixedRangeAndApplyLPs(i);
                     //Apply LP2
-                    if (i < SiftsList.size() - 1) {
-                        SiftsList.get(i).removeWorkersFromContinuousShift(SiftsList.get(i + 1));
-                    }
                     //If there is a range that is empty restart the process
                     if (this.CurrentWeek.CheckForUnsolvableWeek()) {
                         System.out.println("Unsolvable situation");
@@ -32,10 +29,33 @@ public class WeekScheduler {
 
                     }
                 }
+
             }
+
         }
         return CurrentWeek;
-
     }
 
+//    public Week try1(List<Sift> SiftsList, int i, Week initialWeek) {
+//        while (!SiftsList.get(i).isSet()) {
+//            //Set a Worker in a Sift and apply LP1
+//            SiftsList.get(i).setRandomWorkerInAnyNotFixedRangeAndApplyLPs(i);
+//            //If there is a range that is empty restart the process
+//            if (this.CurrentWeek.CheckForUnsolvableWeek()) {
+//                System.out.println("Unsolvable situation");
+//                i = 0;
+//                SiftsList = initialWeek.getSolutionList();
+//
+//
+//            }
+//
+//        }
+//        return CurrentWeek;
+//
+//    }
+
 }
+
+
+
+

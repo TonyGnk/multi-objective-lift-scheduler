@@ -1,18 +1,21 @@
 import helper_functions.DefaultStruct;
 import helper_functions.Gender;
+import helper_functions.WorkerType;
 
 public class Worker implements DefaultStruct {
-	public final String name;
-	public final int id;
-	private final Gender gender;
+    public final String name;
+    public final int id;
+    private final WorkerType type;
+    private final Gender gender;
 
-	public Worker(String name, Gender gender, int id) {
-		this.name = name;
-		this.gender = gender;
-		this.id = id;
-	}
+    public Worker(String name, Gender gender, WorkerType type, int id) {
+        this.name = name;
+        this.gender = gender;
+        this.id = id;
+        this.type = type;
+    }
 
-	public void print() {
-		System.out.println(id);
-	}
+    public void print() {
+        System.out.println(id);
+    }
 }

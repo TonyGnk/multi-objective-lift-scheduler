@@ -66,6 +66,13 @@ public class Sift implements DefaultStruct {
         }
     }
 
+    public void CheckIfSiftIsLastOfWeekAndApplyLP2(int positionInWeek) {
+        if (positionInWeek < WeekScheduler.CurrentWeek.getSolutionList().size() - 1) {
+            removeWorkersFromContinuousShift(WeekScheduler.CurrentWeek.getSolutionList().get(positionInWeek + 1));
+        }
+
+    }
+
 
     public boolean isSet() {
         for (Range range : this.ranges) {
@@ -76,7 +83,7 @@ public class Sift implements DefaultStruct {
         return true;
     }
 
-    public void setRandomWorkerInAnyNotFixedRange() {
+    public void setRandomWorkerInAnyNotFixedRangeAndApplyLPs(int positionInWeek) {
         int randomIndex;
         int workerId;
         for (Range range : ranges) {
@@ -86,9 +93,14 @@ public class Sift implements DefaultStruct {
                 range.setFixedWorker(workerId);
                 //LP1
                 applyOneWorkerInSift();
+                //LP2
+                CheckIfSiftIsLastOfWeekAndApplyLP2(positionInWeek);
+
 
                 break;
             }
+
+
         }
     }
 
