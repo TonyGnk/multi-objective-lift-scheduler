@@ -8,16 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27387b15-b6e2-43e2-a841-5c78a54b4ff0" name="Changes" comment="New class WeekScheduler&#10;New methods in classes: Week,Sift&#10;New test for Scheduler applying LP1-LP2">
-      <change afterPath="$PROJECT_DIR$/src/main/java/helper_functions/WorkerType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/WeekSchedulerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sift.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WeekScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WeekScheduler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Worker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/GetWorkers.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/GetWorkers.kt" afterDir="false" />
-    </list>
-    <list id="61b48ac0-4a73-4018-9f58-92abb7fb713a" name="Changes by TonyGnk" comment="" />
+    <list default="true" id="27387b15-b6e2-43e2-a841-5c78a54b4ff0" name="Changes" comment="New Enum Worker Type" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -361,7 +352,23 @@
       <option name="project" value="LOCAL" />
       <updated>1709651583691</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="New Enum Worker Type">
+      <option name="closed" value="true" />
+      <created>1709908816907</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1709908816907</updated>
+    </task>
+    <task id="LOCAL-00015" summary="New Enum Worker Type">
+      <option name="closed" value="true" />
+      <created>1709908832498</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1709908832498</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -387,7 +394,8 @@
     <MESSAGE value="Apply new print methods to RL-1" />
     <MESSAGE value="Apply new print methods to RL-2" />
     <MESSAGE value="New class WeekScheduler&#10;New methods in classes: Week,Sift&#10;New test for Scheduler applying LP1-LP2" />
-    <option name="LAST_COMMIT_MESSAGE" value="New class WeekScheduler&#10;New methods in classes: Week,Sift&#10;New test for Scheduler applying LP1-LP2" />
+    <MESSAGE value="New Enum Worker Type" />
+    <option name="LAST_COMMIT_MESSAGE" value="New Enum Worker Type" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
