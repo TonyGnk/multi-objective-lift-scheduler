@@ -8,17 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27387b15-b6e2-43e2-a841-5c78a54b4ff0" name="Changes" comment="Implementation of Rule 4 and Rule 5">
-      <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sift.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WeekScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WeekScheduler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Worker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/GetWorkers.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/GetWorkers.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/test_rules/testRL2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/test_rules/testRL2.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/test_rules/testWeeklyScheduler1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/test_rules/testWeeklyScheduler1.kt" afterDir="false" />
-    </list>
+    <list default="true" id="27387b15-b6e2-43e2-a841-5c78a54b4ff0" name="Changes" comment="Changes on GetWorkers, getWorkersLatestId() to reset the latestid to zero" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -404,7 +394,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709917436894</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Changes on GetWorkers, getWorkersLatestId() to reset the latestid to zero">
+      <option name="closed" value="true" />
+      <created>1709923598261</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1709923598261</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -434,7 +432,8 @@
     <MESSAGE value="Changes by TonyGnk" />
     <MESSAGE value="Implementation of Rule 4" />
     <MESSAGE value="Implementation of Rule 4 and Rule 5" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementation of Rule 4 and Rule 5" />
+    <MESSAGE value="Changes on GetWorkers, getWorkersLatestId() to reset the latestid to zero" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes on GetWorkers, getWorkersLatestId() to reset the latestid to zero" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
