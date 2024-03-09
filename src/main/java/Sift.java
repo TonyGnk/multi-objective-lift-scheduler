@@ -1,4 +1,3 @@
-import helper_functions.DefaultStruct;
 import helper_functions.Gender;
 import helper_functions.WorkerType;
 
@@ -6,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Sift implements DefaultStruct {
+public class Sift {
     public final List<Range> ranges = new ArrayList<>();
     private int day;
 
@@ -86,8 +85,8 @@ public class Sift implements DefaultStruct {
     }
 
     public void CheckIfSiftIsLastOfWeekAndApplyLP2(int positionInWeek) {
-        if (positionInWeek < WeekScheduler.CurrentWeek.getSolutionList().size() - 1) {
-            removeWorkersFromContinuousShift(WeekScheduler.CurrentWeek.getSolutionList().get(positionInWeek + 1));
+        if (positionInWeek < WeekScheduler.CurrentWeek.solutionList.size() - 1) {
+            removeWorkersFromContinuousShift(WeekScheduler.CurrentWeek.solutionList.get(positionInWeek + 1));
         }
 
     }
@@ -121,7 +120,7 @@ public class Sift implements DefaultStruct {
         }
     }
 
-    public void setRandomSeniorWorkerInRadomRangeOfMorningSift(int positionInWeek) {
+    public void setRandomSeniorWorkerInRandomRangeOfMorningSift(int positionInWeek) {
         for (Range range : ranges) {
             if (!range.isFixed() && range.exists(WorkerType.SENIOR)) {
                 List<Worker> seniorWorkers = range.getSeniorWorkers();
@@ -152,9 +151,15 @@ public class Sift implements DefaultStruct {
 
 
     public void print() {
+        System.out.println(getRangeIds());
+    }
+
+    public StringBuilder getRangeIds() {
+        StringBuilder rang = new StringBuilder();
         for (Range range : ranges) {
-            range.print();
+            rang.append(range.getIds());
         }
-        System.out.println();//\n
+        rang.append("\n");
+        return rang;
     }
 }

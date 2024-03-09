@@ -1,4 +1,3 @@
-import helper_functions.DefaultStruct;
 import helper_functions.Gender;
 import helper_functions.WorkerType;
 
@@ -7,7 +6,7 @@ import java.util.stream.Collectors;
 
 import static companion_files.RangeCompanionKt.combineIds;
 
-public class Range implements DefaultStruct {
+public class Range {
     public List<Worker> workers;
 
     public Range() {
@@ -67,9 +66,9 @@ public class Range implements DefaultStruct {
         System.out.println(getIds());
     }
 
-    public String getIds() {
+    public StringBuilder getIds() {
         StringBuilder ids = new StringBuilder();
         ids = combineIds(this, ids);
-        return ids.toString();
+        return ids;
     }
 }

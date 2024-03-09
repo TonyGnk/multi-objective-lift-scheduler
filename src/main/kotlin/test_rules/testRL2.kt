@@ -7,6 +7,5 @@ fun test2PreventTheSameWorkerInTwoShifts() {
     for (worker in workers) {
         worker.print()
     }
-
-
+    
 }

@@ -1,10 +1,8 @@
-import helper_functions.DefaultStruct;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class Week implements DefaultStruct {
-    private final List<Sift> solutionList = new ArrayList<>();
+public class Week {
+    public final List<Sift> solutionList = new ArrayList<>();
 
     public Week(Integer days) {
 
@@ -30,15 +28,11 @@ public class Week implements DefaultStruct {
     }
 
     public boolean CheckForUnsolvableWeek() {
-        for (Sift sift : this.getSolutionList()) {
+        for (Sift sift : solutionList) {
             if (sift.hasEmptyRange()) return true;
         }
         return false;
 
-    }
-
-    public List<Sift> getSolutionList() {
-        return solutionList;
     }
 
 

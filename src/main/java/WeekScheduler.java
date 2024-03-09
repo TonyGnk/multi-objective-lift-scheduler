@@ -10,7 +10,7 @@ public class WeekScheduler {
     public Week ProgrammGenerator() {
         int i = 0;
         Week initialWeek = new Week();
-        List<Sift> SiftsList = CurrentWeek.getSolutionList();
+        List<Sift> SiftsList = CurrentWeek.solutionList;
         //When i=SolutionList.size then every sift has a worker
         while (i < SiftsList.size()) {
             checkForMorningSiftAndApplyLP5(i, SiftsList.get(i));
@@ -25,7 +25,7 @@ public class WeekScheduler {
                     if (CurrentWeek.CheckForUnsolvableWeek()) {
                         System.out.println("Unsolvable situation");
                         i = 0;
-                        SiftsList = initialWeek.getSolutionList();
+                        SiftsList = initialWeek.solutionList;
                     }
                 }
 
@@ -36,7 +36,7 @@ public class WeekScheduler {
     }
 
     public void checkForMorningSiftAndApplyLP5(int positionInWeek, Sift MorningSift) {
-        if (positionInWeek % 3 == 0) MorningSift.setRandomSeniorWorkerInRadomRangeOfMorningSift(positionInWeek);
+        if (positionInWeek % 3 == 0) MorningSift.setRandomSeniorWorkerInRandomRangeOfMorningSift(positionInWeek);
     }
 
 //    public Week try1(List<Sift> SiftsList, int i, Week initialWeek) {
@@ -58,7 +58,3 @@ public class WeekScheduler {
 //    }
 
 }
-
-
-
-
