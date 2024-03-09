@@ -5,6 +5,8 @@ import helper_functions.WorkerType;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static companion_files.RangeCompanionKt.combineIds;
+
 public class Range implements DefaultStruct {
     public List<Worker> workers;
 
@@ -69,27 +71,12 @@ public class Range implements DefaultStruct {
 
 
     public void print() {
-        System.out.println(getAllNames());
+        System.out.println(getIds());
     }
 
-    public String getAllNames() {
-        int workersSize = GetWorkersKt.getWorkers().size();
-        StringBuilder workerNames = new StringBuilder();
-
-        for (int i = 0; i < workersSize; i++) {
-            if (workerExists(i)) {
-                workerNames.append(i);
-            } else {
-                //If worker doesn't exist, add `space` with equal size if was exist
-                int idInStringSize = Integer.toString(i).length();
-                workerNames.append(" ".repeat(idInStringSize));
-            }
-            //In the last worker don't add space (11|0)
-            if (i != workersSize - 1) {
-                workerNames.append(" ");
-            }
-        }
-        return workerNames.toString();
+    public String getIds() {
+        StringBuilder ids = new StringBuilder();
+        ids = combineIds(this, ids);
+        return ids.toString();
     }
 }
-

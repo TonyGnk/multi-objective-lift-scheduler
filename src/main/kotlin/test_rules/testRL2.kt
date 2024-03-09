@@ -1,9 +1,9 @@
 package test_rules
 
-import Worker
+import getWorkers
 
 fun test2PreventTheSameWorkerInTwoShifts() {
-    val workers = Worker.ListOfWorkers
+    val workers = getWorkers()
     for (worker in workers) {
         worker.print()
     }

@@ -1,11 +1,8 @@
-import helper_functions.DefaultStruct;
 import helper_functions.Gender;
 import helper_functions.WorkerType;
 
-import java.util.List;
 
-public class Worker implements DefaultStruct {
-    public static List<Worker> ListOfWorkers = GetWorkersKt.getWorkers();
+public class Worker {
     public final String name;
     public final int id;
     public final WorkerType type;
