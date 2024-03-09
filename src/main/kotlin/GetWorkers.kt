@@ -23,11 +23,12 @@ fun getWorkers(): List<Worker> {
     )
 }
 
-public var latestId: Int = -1
+private var latestId: Int = -1
 
-public fun getWorkersLatestId(): Int {
+fun getWorkersLatestId(): Int {
+    if (latestId == 11) latestId = -1
+
     latestId++
-    if (latestId == 12) latestId = 0
     return latestId;
 }
 
