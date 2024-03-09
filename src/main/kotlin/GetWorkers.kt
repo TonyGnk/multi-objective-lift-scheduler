@@ -29,32 +29,32 @@ fun getWorkersLatestId(): Int {
     if (latestId == 11) latestId = -1
 
     latestId++
-    return latestId;
+    return latestId
 }
 
 val printColorMap = mapOf(0 to ::printBlue, 1 to ::printOrange, 2 to ::printDef)
 
 
-public fun printBlue(text: String) {
+fun printBlue(text: String) {
     println("\u001B[34m$text")
     print("\u001B[0m")
 }
 
-public fun printOrange(text: String) {
+fun printOrange(text: String) {
     println("\u001B[33m$text")
     print("\u001B[0m")
 }
 
-public fun printDef(text: String) {
+fun printDef(text: String) {
     println("\u001B[0m$text")
 }
 
-public fun printGreen(text: String) {
+fun printGreen(text: String) {
     println("\u001B[32m$text")
     print("\u001B[0m")
 }
 
-public fun printRed(text: String) {
+fun printRed(text: String) {
     println("\u001B[31m$text")
     print("\u001B[0m")
 }
