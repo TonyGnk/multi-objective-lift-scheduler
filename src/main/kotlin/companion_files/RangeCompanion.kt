@@ -7,7 +7,7 @@ fun combineIds(range: Range, workerNames: StringBuilder): StringBuilder {
     val workersSize: Int = getWorkers().size
 
     for (i in 0 until workersSize) {
-        if (range.workerExists(i)) {
+        if (range.exists(i)) {
             workerNames.append(i)
         } else {
             //If worker doesn't exist, add `space` with equal size if was existed

@@ -1,5 +1,6 @@
 import helper_functions.DefaultStruct;
 import helper_functions.Gender;
+import helper_functions.WorkerType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,10 +40,10 @@ public class Sift implements DefaultStruct {
         boolean existMale = false;
         boolean existFemale = false;
         for (Range currentRange : ranges) {
-            if (currentRange.genderExists(Gender.MALE)) {
+            if (currentRange.exists(Gender.MALE)) {
                 existMale = true;
             }
-            if (currentRange.genderExists(Gender.FEMALE)) {
+            if (currentRange.exists(Gender.FEMALE)) {
                 existFemale = true;
             }
         }
@@ -64,7 +65,7 @@ public class Sift implements DefaultStruct {
     ) {
         for (Range otherRange : ranges) {
             if (otherRange != workersRange
-                    && otherRange.workerExists(idOfFixedWorker)) {
+                    && otherRange.exists(idOfFixedWorker)) {
                 otherRange.removeWorker(idOfFixedWorker);
             }
         }
@@ -122,8 +123,8 @@ public class Sift implements DefaultStruct {
 
     public void setRandomSeniorWorkerInRadomRangeOfMorningSift(int positionInWeek) {
         for (Range range : ranges) {
-            if (!range.isFixed() && range.seniorWorkerExists()) {
-                List<Worker> seniorWorkers = range.returnSeniorWorkers();
+            if (!range.isFixed() && range.exists(WorkerType.SENIOR)) {
+                List<Worker> seniorWorkers = range.getSeniorWorkers();
 
                 int randomIndex = (int) (Math.random() * seniorWorkers.size());
                 range.setFixedWorker(seniorWorkers.get(randomIndex).id);

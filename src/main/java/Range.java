@@ -29,8 +29,8 @@ public class Range implements DefaultStruct {
 
     public boolean canBeFixedWorker(int id) {
         boolean dayOfRule = GetWorkLimitsKt.getWorkLimit().get(id) > 0;
-        boolean genderRuleA = genderExists(Gender.MALE);
-        boolean genderRuleB = genderExists(Gender.FEMALE);
+        boolean genderRuleA = exists(Gender.MALE);
+        boolean genderRuleB = exists(Gender.FEMALE);
 
         return (dayOfRule && genderRuleA && genderRuleB);
     }
@@ -43,32 +43,25 @@ public class Range implements DefaultStruct {
         GetWorkLimitsKt.getWorkLimit().set(fixedWorkerId, currentTimes - 1);
     }
 
-    public boolean workerExists(int id) {
-        return workers.stream().anyMatch(worker -> worker.id == id);
-    }
 
-    public List<Worker> returnSeniorWorkers() {
+    public List<Worker> getSeniorWorkers() {
         return workers.stream().filter(worker -> worker.type == WorkerType.SENIOR)
                 .collect(Collectors.toList());
     }
 
-    public boolean seniorWorkerExists() {
-        return workers.stream().anyMatch(worker -> worker.type == WorkerType.SENIOR);
+
+    public <T> boolean exists(T attribute) {
+        return workers.stream().anyMatch(worker -> {
+            if (attribute instanceof Gender) {
+                return worker.gender == attribute;
+            } else if (attribute instanceof WorkerType) {
+                return worker.type == attribute;
+            } else if (attribute instanceof Integer) {
+                return worker.id == (Integer) attribute;
+            }
+            return false;
+        });
     }
-
-    public boolean genderExists(Gender gender) {
-        return workers.stream().anyMatch(worker -> worker.gender == gender);
-    }
-
-
-    public String workerNamesInOneLine() {
-        StringBuilder workerNamesInOneLine = new StringBuilder();
-        for (Worker worker : workers) {
-            workerNamesInOneLine.append(worker.id).append(" ");
-        }
-        return workerNamesInOneLine.toString();
-    }
-
 
     public void print() {
         System.out.println(getIds());
