@@ -7,7 +7,7 @@ public class WeekScheduler {
         CurrentWeek = new Week();
     }
 
-    public Week ProgrammGenerator() {
+    public Week ProgramGenerator() {
         int i = 0;
         Week initialWeek = new Week();
         List<Sift> SiftsList = CurrentWeek.solutionList;

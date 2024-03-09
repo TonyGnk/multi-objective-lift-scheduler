@@ -151,15 +151,15 @@ public class Sift {
 
 
     public void print() {
-        System.out.println(getRangeIds());
+        System.out.println(getRangesInLines());
     }
 
-    public StringBuilder getRangeIds() {
-        StringBuilder rang = new StringBuilder();
+    public StringBuilder getRangesInLines() {
+        StringBuilder string = new StringBuilder();
         for (Range range : ranges) {
-            rang.append(range.getIds());
+            string.append(range.getIds());
+            string.append("\n");
         }
-        rang.append("\n");
-        return rang;
+        return string;
     }
 }

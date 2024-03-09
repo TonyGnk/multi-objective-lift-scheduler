@@ -4,14 +4,15 @@ import helper_functions.WorkerType;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static companion_files.RangeCompanionKt.combineIds;
 
 public class Range {
     public List<Worker> workers;
 
     public Range() {
-        workers = GetWorkersKt.getWorkers();
+        workers = AskKotlinForHelpKt.getWorkers();
+
     }
+
 
     public boolean isFixed() {
         return workers.size() == 1;
@@ -27,7 +28,7 @@ public class Range {
     }
 
     public boolean canBeFixedWorker(int id) {
-        boolean dayOfRule = GetWorkLimitsKt.getWorkLimit().get(id) > 0;
+        boolean dayOfRule = AskKotlinForHelpKt.getWorkLimit().get(id) > 0;
         boolean genderRuleA = exists(Gender.MALE);
         boolean genderRuleB = exists(Gender.FEMALE);
 
@@ -38,8 +39,8 @@ public class Range {
         workers = workers
                 .stream().filter(worker -> worker.id == fixedWorkerId)
                 .collect(Collectors.toList());
-        int currentTimes = GetWorkLimitsKt.getWorkLimit().get(fixedWorkerId);
-        GetWorkLimitsKt.getWorkLimit().set(fixedWorkerId, currentTimes - 1);
+        int currentTimes = AskKotlinForHelpKt.getWorkLimit().get(fixedWorkerId);
+        AskKotlinForHelpKt.getWorkLimit().set(fixedWorkerId, currentTimes - 1);
     }
 
 
@@ -67,8 +68,6 @@ public class Range {
     }
 
     public StringBuilder getIds() {
-        StringBuilder ids = new StringBuilder();
-        ids = combineIds(this, ids);
-        return ids;
+        return AskKotlinForHelpKt.combineIds(this);
     }
 }

@@ -37,6 +37,6 @@ public class Week {
 
 
     public void print() {
-        WeekPrinterKt.weekPrinter(solutionList);
+        AskKotlinForHelpKt.weekPrinter(solutionList);
     }
 }
