@@ -1,21 +1,45 @@
-import helper_functions.Gender;
+import helper_functions.Day;
+import helper_functions.Time;
 import helper_functions.WorkerType;
+import manager_blocks.RangesNumber;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.IntStream;
+
+import static manager_blocks.RangesNumberKt.getDayType;
 
 
 public class Sift {
     public final List<Range> ranges = new ArrayList<>();
-    private int day;
+    public final Time time;
+    public final Day day;
 
-    public Sift(int day, int numberOfRanges) {
-        for (int i = 0; i < numberOfRanges; i++) {
-            this.ranges.add(new Range());
-            this.day = day;
+
+    public Sift(int day, Time time) {
+        this.day = getDayType(day);
+        this.time = time;
+
+        int numberOfRanges = new RangesNumber().get(time, getDayType(day));
+        IntStream.range(0, numberOfRanges).forEach(i -> ranges.add(new Range()));
+    }
+
+    public Sift() {
+        this(1, Time.MORNING);
+    }
+
+    public void solve(int workerId) {
+        for (Range range : ranges) {
+            if (!range.isFixed()) {
+                //Copy the current range in a copy variable
+                Range copy = new Range(range.workers);
+                range.tryToSolve();
+
+                //range.setFixedWorker(workerId);
+                break;
+            }
         }
     }
-    //generate a random worker for a range
 
     public void setWorkerInAnyNotFixedRange(int workerId) {
         for (Range range : ranges) {
@@ -33,21 +57,6 @@ public class Sift {
             }
         }
         return false;
-    }
-
-    private boolean existAtLeastOneGender() {
-        boolean existMale = false;
-        boolean existFemale = false;
-        for (Range currentRange : ranges) {
-            if (currentRange.exists(Gender.MALE)) {
-                existMale = true;
-            }
-            if (currentRange.exists(Gender.FEMALE)) {
-                existFemale = true;
-            }
-        }
-        return existFemale && existMale;
-
     }
 
     public void applyOneWorkerInSift() {
@@ -88,17 +97,11 @@ public class Sift {
         if (positionInWeek < WeekScheduler.CurrentWeek.solutionList.size() - 1) {
             removeWorkersFromContinuousShift(WeekScheduler.CurrentWeek.solutionList.get(positionInWeek + 1));
         }
-
     }
 
 
-    public boolean isSet() {
-        for (Range range : this.ranges) {
-            if (!range.isFixed()) {
-                return false;
-            }
-        }
-        return true;
+    public boolean isFixed() {
+        return ranges.stream().allMatch(Range::isFixed);
     }
 
     public void setRandomWorkerInAnyNotFixedRangeAndApplyLPs(int positionInWeek) {
@@ -113,7 +116,6 @@ public class Sift {
                 applyOneWorkerInSift();
                 //LP2
                 CheckIfSiftIsLastOfWeekAndApplyLP2(positionInWeek);
-
 
                 break;
             }
@@ -133,8 +135,6 @@ public class Sift {
                 //LP2
                 CheckIfSiftIsLastOfWeekAndApplyLP2(positionInWeek);
                 break;
-
-
             }
         }
 
@@ -144,7 +144,6 @@ public class Sift {
     public boolean hasEmptyRange() {
         for (Range range : ranges) {
             if (range.workers.isEmpty()) return true;
-
         }
         return false;
     }

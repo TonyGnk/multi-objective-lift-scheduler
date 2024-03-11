@@ -14,10 +14,10 @@ public class WeekScheduler {
         //When i=SolutionList.size then every sift has a worker
         while (i < SiftsList.size()) {
             checkForMorningSiftAndApplyLP5(i, SiftsList.get(i));
-            if (SiftsList.get(i).isSet()) {
+            if (SiftsList.get(i).isFixed()) {
                 i++;
             } else {
-                while (!SiftsList.get(i).isSet()) {
+                while (!SiftsList.get(i).isFixed()) {
                     //Set a Worker in a Sift and apply LP1
                     SiftsList.get(i).setRandomWorkerInAnyNotFixedRangeAndApplyLPs(i);
                     //Apply LP2

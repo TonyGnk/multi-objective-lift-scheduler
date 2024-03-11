@@ -1,5 +1,6 @@
 fun main() {
+    val plan = Sift()
+    plan.print()
 
-    val plan = Week(7)
-
+    println(plan.isFixed)
 }

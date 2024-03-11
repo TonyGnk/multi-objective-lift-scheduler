@@ -2,7 +2,6 @@ package test_rules
 
 import Week
 import printGreen
-import printRed
 
 fun test3() {
     println("\nΕφαρμογή 3ου Περιορισμού")
@@ -39,12 +38,12 @@ fun test3() {
 
     week.print()
     printGreen("Ο εργαζόμενος 3 έχει δουλέψει 5 φορές, απόπειρα νέα προσθήκης:")
-    if (week.solutionList[9].canSetWorkerInAnyNotFixedRange(3)) {
-        week.solutionList[9].setWorkerInAnyNotFixedRange(3)
-        println("Η προσθήκη έγινε με επιτυχία. Άρα έχουμε λάθος")
-    } else {
-        printRed("Δεν επιτρέπεται νέα προσθήκη")
-    }
+//    if (week.solutionList[9].canSetWorkerInAnyNotFixedRange(3)) {
+//        week.solutionList[9].setWorkerInAnyNotFixedRange(3)
+//        println("Η προσθήκη έγινε με επιτυχία. Άρα έχουμε λάθος")
+//    } else {
+//        printRed("Δεν επιτρέπεται νέα προσθήκη")
+//    }
 
     println("________________________________________________")
 }

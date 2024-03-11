@@ -8,7 +8,7 @@ fun test1ApplyOneWorkerInSift() {
     //? Δε γίνεται ένας εργαζόμενος να καλύπτει δύο θέσεις σε μια βάρδια
 
     printGreen("\nΔημιουργείται μια νέα βάρδια 3 θέσεων (Όπως η πρωινή βάρδια)")
-    val sift = Sift(1, 3)
+    val sift = Sift()
     sift.print()
 
 

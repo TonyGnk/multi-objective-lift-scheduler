@@ -1,3 +1,4 @@
+import helper_functions.Day
 import helper_functions.Gender
 import helper_functions.WorkerType
 
@@ -120,3 +121,13 @@ fun printRed(text: String) {
     println("\u001B[31m$text")
     print("\u001B[0m")
 }
+
+val findDayType = mapOf(
+    1 to Day.NORMAL,
+    2 to Day.NORMAL,
+    3 to Day.NORMAL,
+    4 to Day.NORMAL,
+    5 to Day.NORMAL,
+    6 to Day.WEEKEND,
+    7 to Day.WEEKEND,
+)

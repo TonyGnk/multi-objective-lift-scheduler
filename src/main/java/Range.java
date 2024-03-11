@@ -1,18 +1,20 @@
 import helper_functions.Gender;
 import helper_functions.WorkerType;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-
 
 public class Range {
     public List<Worker> workers;
 
     public Range() {
         workers = AskKotlinForHelpKt.getWorkers();
-
     }
 
+    public Range(List<Worker> workers) {
+        workers = new ArrayList<>(workers);
+    }
 
     public boolean isFixed() {
         return workers.size() == 1;
@@ -70,4 +72,14 @@ public class Range {
     public StringBuilder getIds() {
         return AskKotlinForHelpKt.combineIds(this);
     }
+
+    public void tryToSolve() {
+        for (Worker worker : workers) {
+            if (canBeFixedWorker(worker.id)) {
+                setFixedWorker(worker.id);
+                break;
+            }
+        }
+    }
+
 }
