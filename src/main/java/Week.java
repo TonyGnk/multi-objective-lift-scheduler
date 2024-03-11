@@ -2,6 +2,7 @@ import helper_functions.Time;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static manager_blocks.RangesNumberKt.getListTimeFrom;
 
@@ -28,12 +29,23 @@ public class Week {
         this(Time.MORNING, 1, days);
     }
 
+
     public boolean CheckForUnsolvableWeek() {
         for (Sift sift : solutionList) {
             if (sift.hasEmptyRange()) return true;
         }
         return false;
+    }
 
+    public List<Sift> collectSiftsWithTime(Time time) {
+        return solutionList.stream()
+                .filter(sift -> sift.time == time)
+                .collect(Collectors.toList());
+    }
+
+    public boolean checkIfExistSeniorWorkerInMorningTime() {
+        return collectSiftsWithTime(Time.MORNING).stream()
+                .anyMatch(sift -> sift.s());
     }
 
 

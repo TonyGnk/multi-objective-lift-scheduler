@@ -65,6 +65,21 @@ public class Range {
         });
     }
 
+    public <T> int getNumberGender(Gender gender) {
+        int count = 0;
+        for (Worker worker : workers) {
+            if (worker.gender == gender) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public int getFirstGenderId(Gender gender) {
+        for (Worker worker : workers) {
+            if (worker.gender == gender) return worker.id;
+        }
+
     public void print() {
         System.out.println(getIds());
     }
