@@ -6,7 +6,9 @@ import Week
 
 fun findSolution(week: Week) {
     applyOneTimeRules(week)
-    applyRules(week)
+    week.print()
+
+    //applyRules(week)
 
     //If is solution return
 

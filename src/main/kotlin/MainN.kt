@@ -1,6 +1,9 @@
-fun main() {
-    val plan = Sift()
-    plan.print()
+import manager_blocks.findSolution
 
-    println(plan.isFixed)
+fun main() {
+//    val plan = Sift()
+//    plan.print()
+//
+//    println(plan.isFixed)
+    findSolution(Week())
 }

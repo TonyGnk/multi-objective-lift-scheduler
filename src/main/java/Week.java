@@ -43,10 +43,10 @@ public class Week {
                 .collect(Collectors.toList());
     }
 
-    public boolean checkIfExistSeniorWorkerInMorningTime() {
-        return collectSiftsWithTime(Time.MORNING).stream()
-                .anyMatch(sift -> sift.s());
-    }
+//    public boolean checkIfExistSeniorWorkerInMorningTime() {
+//        return collectSiftsWithTime(Time.MORNING).stream()
+//                .anyMatch(sift -> sift.exists());
+//    }
 
 
     public void print() {

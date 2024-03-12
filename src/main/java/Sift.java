@@ -138,7 +138,8 @@ public class Sift {
     public boolean isFixed() {
         return ranges.stream().allMatch(Range::isFixed);
     }
-//
+
+    //
 //    public void setRandomWorkerInAnyNotFixedRangeAndApplyLPs(int positionInWeek) {
 //        int randomIndex;
 //        int workerId;
@@ -173,17 +174,18 @@ public class Sift {
 //        }
 //    }
 //
-//    public boolean hasEmptyRange() {
-//        for (Range range : ranges) {
-//            if (range.workers.isEmpty()) return true;
+    public boolean hasEmptyRange() {
+        for (Range range : ranges) {
+            if (range.workers.isEmpty()) return true;
+        }
+        return false;
+    }
+
+//    public void CheckIfSiftIsLastOfWeekAndApplyLP2(int positionInWeek) {
+//        if (positionInWeek < WeekScheduler.CurrentWeek.solutionList.size() - 1) {
+//            removeWorkersFromContinuousShift(WeekScheduler.CurrentWeek.solutionList.get(positionInWeek + 1));
 //        }
-//        return false;
 //    }
-//public void CheckIfSiftIsLastOfWeekAndApplyLP2(int positionInWeek) {
-//    if (positionInWeek < WeekScheduler.CurrentWeek.solutionList.size() - 1) {
-//        removeWorkersFromContinuousShift(WeekScheduler.CurrentWeek.solutionList.get(positionInWeek + 1));
-//    }
-//}
 
 
     public void print() {

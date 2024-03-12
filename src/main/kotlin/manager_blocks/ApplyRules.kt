@@ -20,7 +20,7 @@ fun applyRules(week: Week) {
 //in a morning sift and if the number is only 1, then
 //will set the worker
 fun allGendersAtMorning(week: Week): Int {
-    var mustApplyAgain = 1
+    var mustApplyAgain = 0
 
     val morningSifts = week.collectSiftsWithTime(Time.MORNING)
 
@@ -37,7 +37,5 @@ fun allGendersAtMorning(week: Week): Int {
     }
 
 
-    if (mustApplyAgain != 0) {
-        applyRules(week)
-    }
+    return mustApplyAgain
 }

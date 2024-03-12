@@ -79,6 +79,8 @@ public class Range {
         for (Worker worker : workers) {
             if (worker.gender == gender) return worker.id;
         }
+        return -1;
+    }
 
     public void print() {
         System.out.println(getIds());
