@@ -8,7 +8,7 @@ fun weekPrinterMorning(week: Week) {
 
 fun weekPrinterPerTime(week: Week, time: Time) {
     val sifts = week.solutionList.filter { it.time == time }.toList()
-    //println("Sifts with time $time are: ${sifts.size}")
+    //println("Shifts with time $time are: ${sifts.size}")
 
 
     //Find the max size of the ranges
@@ -19,7 +19,7 @@ fun weekPrinterPerTime(week: Week, time: Time) {
 
     for (i in sifts.indices) {
         for (j in 0 until maxNumberOfRows) {
-            //If morningSifts[i].ranges[j] exists, append the id of the worker else add \n
+            //If morningShifts[i].ranges[j] exists, append the id of the worker else add \n
             if (sifts[i].ranges.size > j) {
                 listSB2[j].append(sifts[i].ranges[j].ids)
             } else {

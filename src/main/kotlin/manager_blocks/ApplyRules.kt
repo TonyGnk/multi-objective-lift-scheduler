@@ -22,7 +22,7 @@ fun applyRules(week: Week) {
 fun allGendersAtMorning(week: Week): Int {
     var mustApplyAgain = 0
 
-    val morningSifts = week.collectSiftsWithTime(Time.MORNING)
+    val morningSifts = week.collectShiftsWith(Time.MORNING)
 
     for (sift in morningSifts) {
         val males = sift.onlyOneGender(Gender.MALE)

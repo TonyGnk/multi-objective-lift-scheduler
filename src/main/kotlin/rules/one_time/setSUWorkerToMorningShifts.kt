@@ -1,4 +1,4 @@
-package manager_blocks
+package rules.one_time
 
 import Week
 import helper_functions.Time
@@ -8,10 +8,11 @@ import workersRemainingWorkTimes
  * This one-time rule sets SU worker in every morning shift as possible
  *
  * @param week The week for which the morning shifts are to be set
+ * @param showMessages A boolean to show the debug messages or not
  * @return Nothing
  */
-fun setSUWorkerToMorningShifts(week: Week) {
-    val morningSifts = week.solutionList.filter { it.time == Time.MORNING }.toList()
+fun setSUWorkerToMorningShifts(week: Week, showMessages: Boolean) {
+    val morningSifts = week.collectShiftsWith(Time.MORNING)
     val idOfSU = 0
 
     //While the workersRemainingWorkTimes of the SU worker is not 0 set the SU worker to the morning shifts
@@ -21,7 +22,8 @@ fun setSUWorkerToMorningShifts(week: Week) {
         }
     }
 
-    println("SU worker has been set to the morning shifts")
-    week.print()
-
+    if (showMessages) {
+        println("SU worker has been set to the morning shifts")
+        week.print()
+    }
 }

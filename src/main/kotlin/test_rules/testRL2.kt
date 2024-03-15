@@ -24,7 +24,7 @@ fun test2PreventTheSameWorkerInTwoShifts() {
 
 
     printGreen("Εφαρμόζεται ο περιορισμός RL-1")
-    testWeek.solutionList.first().applyOneWorkerInSift()
+    testWeek.solutionList.first().applyOneWorkerInShift()
     testWeek.print()
 
 

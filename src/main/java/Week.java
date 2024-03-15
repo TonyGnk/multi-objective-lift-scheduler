@@ -1,3 +1,4 @@
+import helper_functions.Day;
 import helper_functions.Time;
 
 import java.util.ArrayList;
@@ -8,7 +9,7 @@ import static manager_blocks.RangesNumberKt.findNextTime;
 import static manager_blocks.RangesNumberKt.getListTimeFrom;
 
 public class Week {
-    public final List<Sift> solutionList = new ArrayList<>();
+    public final List<Shift> solutionList = new ArrayList<>();
     public final int days;
 
     public Week(Time startFrom, Time endTime, int startDay, int days) {
@@ -19,7 +20,7 @@ public class Week {
             for (Time time : times) {
                 if (i == days - 1 && time == endTime) continue;
 
-                solutionList.add(new Sift(i, time));
+                solutionList.add(new Shift(i, time));
             }
             times = getListTimeFrom(Time.MORNING);
         }
@@ -37,20 +38,25 @@ public class Week {
 
 
     public boolean CheckForUnsolvableWeek() {
-        for (Sift sift : solutionList) {
+        for (Shift sift : solutionList) {
             if (sift.hasEmptyRange()) return true;
         }
         return false;
     }
 
-    public List<Sift> collectSiftsWithTime(Time time) {
-        return solutionList.stream()
-                .filter(sift -> sift.time == time)
-                .collect(Collectors.toList());
+    public <T> List<Shift> collectShiftsWith(T attribute) {
+        if (attribute instanceof Day) {
+            return solutionList.stream().filter(sift -> sift.day == attribute)
+                    .collect(Collectors.toList());
+        } else if (attribute instanceof Time) {
+            return solutionList.stream().filter(sift -> sift.time == attribute)
+                    .collect(Collectors.toList());
+        }
+        return new ArrayList<>();
     }
 
 //    public boolean checkIfExistSeniorWorkerInMorningTime() {
-//        return collectSiftsWithTime(Time.MORNING).stream()
+//        return collectShiftsWithTime(Time.MORNING).stream()
 //                .anyMatch(sift -> sift.exists());
 //    }
 

@@ -1,6 +1,6 @@
 package test_rules
 
-import Sift
+import Shift
 import printGreen
 
 fun test1ApplyOneWorkerInSift() {
@@ -8,7 +8,7 @@ fun test1ApplyOneWorkerInSift() {
     //? Δε γίνεται ένας εργαζόμενος να καλύπτει δύο θέσεις σε μια βάρδια
 
     printGreen("\nΔημιουργείται μια νέα βάρδια 3 θέσεων (Όπως η πρωινή βάρδια)")
-    val sift = Sift()
+    val sift = Shift()
     sift.print()
 
 
@@ -19,7 +19,7 @@ fun test1ApplyOneWorkerInSift() {
 
 
     printGreen("Εφαρμόζουμε τον περιορισμό και βλέπουμε ότι στη θέση 3 αφαιρέθηκαν οι εργαζόμενοι που ορίστηκαν στις άλλες θέσεις")
-    sift.applyOneWorkerInSift()
+    sift.applyOneWorkerInShift()
     sift.print()
 
     println("________________________________________________")

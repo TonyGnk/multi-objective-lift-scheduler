@@ -11,13 +11,13 @@ import java.util.stream.IntStream;
 import static manager_blocks.RangesNumberKt.getDayType;
 
 
-public class Sift {
+public class Shift {
     public final List<Range> ranges = new ArrayList<>();
     public final Time time;
     public final Day day;
 
 
-    public Sift(int day, Time time) {
+    public Shift(int day, Time time) {
         this.day = getDayType(day);
         this.time = time;
 
@@ -25,7 +25,7 @@ public class Sift {
         IntStream.range(0, numberOfRanges).forEach(i -> ranges.add(new Range()));
     }
 
-    public Sift() {
+    public Shift() {
         this(1, Time.MORNING);
     }
 
@@ -95,7 +95,7 @@ public class Sift {
         return count == 1;
     }
 
-    public void applyOneWorkerInSift() {
+    public void applyOneWorkerInShift() {
         for (Range currentRange : ranges) {
             if (currentRange.isFixed()) {
                 int idOfFixedWorker = currentRange.getFirstWorkerId();
@@ -120,14 +120,14 @@ public class Sift {
         applyRules();
     }
 
-    public void removeWorkersFromContinuousShift(Sift ContinousSift) {
+    public void removeWorkersFromContinuousShift(Shift ContinousShift) {
         List<Integer> tempWorkersIDs = new ArrayList<>();
         for (Range range : this.ranges) {
             if (range.isFixed()) {
                 tempWorkersIDs.add(range.getFirstWorkerId());
             }
         }
-        for (Range range : ContinousSift.ranges) {
+        for (Range range : ContinousShift.ranges) {
             for (Integer id : tempWorkersIDs) {
                 range.removeWorker(id);
             }
@@ -137,6 +137,14 @@ public class Sift {
 
     public boolean isFixed() {
         return ranges.stream().allMatch(Range::isFixed);
+    }
+
+    public boolean isFixed(int workerId) {
+        return ranges.stream().anyMatch(range -> range.exists(workerId) && range.isFixed());
+    }
+
+    public boolean isFixed(WorkerType type) {
+        return ranges.stream().anyMatch(range -> range.exists(type) && range.isFixed());
     }
 
     //
@@ -149,15 +157,15 @@ public class Sift {
 //                workerId = range.workers.get(randomIndex).id;
 //                range.setFixedWorker(workerId);
 //                //LP1
-//                applyOneWorkerInSift();
+//                applyOneWorkerInShift();
 //                //LP2
-//                CheckIfSiftIsLastOfWeekAndApplyLP2(positionInWeek);
+//                CheckIfShiftIsLastOfWeekAndApplyLP2(positionInWeek);
 //
 //                break;
 //            }
 //        }
 //    }
-//    public void setRandomSeniorWorkerInRandomRangeOfMorningSift(int positionInWeek) {
+//    public void setRandomSeniorWorkerInRandomRangeOfMorningShift(int positionInWeek) {
 //        for (Range range : ranges) {
 //            if (!range.isFixed() && range.exists(WorkerType.SENIOR)) {
 //                List<Worker> seniorWorkers = range.getSeniorWorkers();
@@ -166,9 +174,9 @@ public class Sift {
 //                range.setFixedWorker(seniorWorkers.get(randomIndex).id);
 //                //seniorWorkers.get(randomIndex).id
 //                //LP1
-//                applyOneWorkerInSift();
+//                applyOneWorkerInShift();
 //                //LP2
-//                CheckIfSiftIsLastOfWeekAndApplyLP2(positionInWeek);
+//                CheckIfShiftIsLastOfWeekAndApplyLP2(positionInWeek);
 //                break;
 //            }
 //        }
@@ -181,7 +189,7 @@ public class Sift {
         return false;
     }
 
-//    public void CheckIfSiftIsLastOfWeekAndApplyLP2(int positionInWeek) {
+//    public void CheckIfShiftIsLastOfWeekAndApplyLP2(int positionInWeek) {
 //        if (positionInWeek < WeekScheduler.CurrentWeek.solutionList.size() - 1) {
 //            removeWorkersFromContinuousShift(WeekScheduler.CurrentWeek.solutionList.get(positionInWeek + 1));
 //        }
