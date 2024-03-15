@@ -2,7 +2,6 @@ package test_rules
 
 import Week
 import getWorkers
-import helper_functions.Time
 import printGreen
 
 fun test2PreventTheSameWorkerInTwoShifts() {
@@ -14,7 +13,7 @@ fun test2PreventTheSameWorkerInTwoShifts() {
     }
 
     printGreen("\nΔημιουργείται μια νέα εβδομάδα 1 ημέρας")
-    val testWeek = Week(Time.MORNING, 1, 3)
+    val testWeek = Week(1)
     testWeek.print()
 
 

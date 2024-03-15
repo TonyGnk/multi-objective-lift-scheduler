@@ -189,7 +189,7 @@ public class Sift {
 
 
     public void print() {
-        System.out.println(getRangesInLines());
+        AskKotlinForHelpKt.printColorTime(time, getRangesInLines());
     }
 
     public StringBuilder getRangesInLines() {

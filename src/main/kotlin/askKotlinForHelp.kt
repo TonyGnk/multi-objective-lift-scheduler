@@ -1,5 +1,6 @@
 import helper_functions.Day
 import helper_functions.Gender
+import helper_functions.Time
 import helper_functions.WorkerType
 
 // In this project the Java code is converted to Kotlin to run using the Kotlin compiler.
@@ -24,7 +25,7 @@ fun getWorkers(): List<Worker> {
     )
 }
 
-val workLimit = List(12) { 5 } //Ο ορισμός της απλότητας
+val workersRemainingWorkTimes = List(12) { 5 } //Ο ορισμός της απλότητας
 
 
 private var latestId: Int = -1
@@ -57,46 +58,27 @@ fun combineIds(range: Range): StringBuilder {
     return workerNames
 }
 
-fun weekPrinter(weekList: MutableList<Sift>) {
+fun getSpaceEqualToCombineRow(): StringBuilder {
+    val range = Range()
+    val idsRow = combineIds(range)
+    val idSize = idsRow.length
+    val space = StringBuilder()
 
-    // Repeat 3 times
-    for (siftType in 0..2) {
-
-        // Create a list of StringBuilder based on the size of the ranges
-        // For example, for the morning sift we have a list of 3 StringBuilder
-        val listSB = MutableList(weekList[siftType].ranges.size) { StringBuilder() }
-
-        // The morning sifts are in 0,3,6
-        // The afternoon sifts are in 1,4,7
-        // The night sifts are in 2,5,8
-        for (i in siftType until weekList.size step 3) {
-
-
-            // For each range, we create a row with "|"
-            for (j in weekList[i].ranges.indices) {
-                listSB[j].append(weekList[i].ranges[j].ids)
-                //if j is in last index of the list, we don't append "|"
-                if (i + 3 < weekList.size) {
-                    listSB[j].append("|")
-                }
-            }
-
-        }
-
-        // Print the list of StringBuilder
-        for (sb in listSB) {
-            // We use the printColorMap to print the StringBuilder with the correct color
-            // The printColorMap is a map of Int to function
-            // For 0 printBlue, for 1 printOrange and int 2 printDefault
-            printColorMap[siftType]?.invoke(sb.toString())
-        }
-    }
-    println()
+    space.append(" ".repeat(idSize))
+    return space
 }
 
 
-val printColorMap = mapOf(0 to ::printBlue, 1 to ::printOrange, 2 to ::printDef)
+fun weekPrinter(week: Week) {
+    weekPrinterMorning(week)
+}
 
+
+val printColorMap = mapOf(Time.MORNING to ::printBlue, Time.AFTERNOON to ::printOrange, Time.NIGHT to ::printDef)
+
+fun printColorTime(time: Time, str: StringBuilder) {
+    printColorMap[time]?.invoke(str.toString())
+}
 
 fun printBlue(text: String) {
     println("\u001B[34m$text")

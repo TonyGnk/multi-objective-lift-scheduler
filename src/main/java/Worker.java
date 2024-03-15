@@ -17,6 +17,10 @@ public class Worker {
         this.type = type;
     }
 
+    public int getRemainingWorkTimes() {
+        return AskKotlinForHelpKt.getWorkersRemainingWorkTimes().get(id);
+    }
+
     public void print() {
         System.out.println(id);
     }

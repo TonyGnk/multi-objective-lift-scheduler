@@ -30,7 +30,7 @@ public class Range {
     }
 
     public boolean canBeFixedWorker(int id) {
-        boolean dayOfRule = AskKotlinForHelpKt.getWorkLimit().get(id) > 0;
+        boolean dayOfRule = AskKotlinForHelpKt.getWorkersRemainingWorkTimes().get(id) > 0;
         boolean genderRuleA = exists(Gender.MALE);
         boolean genderRuleB = exists(Gender.FEMALE);
 
@@ -41,8 +41,8 @@ public class Range {
         workers = workers
                 .stream().filter(worker -> worker.id == fixedWorkerId)
                 .collect(Collectors.toList());
-        int currentTimes = AskKotlinForHelpKt.getWorkLimit().get(fixedWorkerId);
-        AskKotlinForHelpKt.getWorkLimit().set(fixedWorkerId, currentTimes - 1);
+        int currentTimes = AskKotlinForHelpKt.getWorkersRemainingWorkTimes().get(fixedWorkerId);
+        AskKotlinForHelpKt.getWorkersRemainingWorkTimes().set(fixedWorkerId, currentTimes - 1);
     }
 
 

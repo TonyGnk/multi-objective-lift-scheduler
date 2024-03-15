@@ -5,7 +5,7 @@ import helper_functions.Gender
 import helper_functions.Time
 
 fun applyRules(week: Week) {
-    var mustApplyAgain = 1
+    var mustApplyAgain = 0
 
     //Apply the rules to the week
     mustApplyAgain += allGendersAtMorning(week)

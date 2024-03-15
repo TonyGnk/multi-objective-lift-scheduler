@@ -14,8 +14,16 @@ fun getListTimeFrom(startTime: Time): List<Time> {
     return listOf(Time.NIGHT)
 }
 
+fun findNextTime(time: Time): Time {
+    return when (time) {
+        Time.MORNING -> Time.AFTERNOON
+        Time.AFTERNOON -> Time.NIGHT
+        Time.NIGHT -> Time.MORNING
+    }
+}
+
 class RangesNumber {
-    var rangesInSift = mapOf(
+    private var rangesInSift = mapOf(
         Pair(Time.MORNING, Day.NORMAL) to 3,
         Pair(Time.MORNING, Day.WEEKEND) to 2,
         Pair(Time.AFTERNOON, Day.NORMAL) to 2,
