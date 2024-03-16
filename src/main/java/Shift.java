@@ -29,23 +29,6 @@ public class Shift {
         this(1, Time.MORNING);
     }
 
-    public void solve(int workerId) {
-        for (Range range : ranges) {
-            if (!range.isFixed()) {
-                //Copy the current range in a copy variable
-                Range copy = new Range(range.workers);
-                range.tryToSolve();
-
-                //range.setFixedWorker(workerId);
-                break;
-            }
-        }
-    }
-
-    public void applyRules() {
-        // 4 | 2,4 | 2,3
-        // 4 | 2 | 2,3
-    }
 
 //    public void setWorkerInAnyNotFixedRange(int workerId) {
 //        for (Range range : ranges) {
@@ -117,7 +100,6 @@ public class Shift {
 
     private void removeWorker(int range, int idForRemove) {
         ranges.get(range).removeWorker(idForRemove);
-        applyRules();
     }
 
     public void removeWorkersFromContinuousShift(Shift ContinousShift) {
@@ -147,41 +129,42 @@ public class Shift {
         return ranges.stream().anyMatch(range -> range.exists(type) && range.isFixed());
     }
 
-    //
-//    public void setRandomWorkerInAnyNotFixedRangeAndApplyLPs(int positionInWeek) {
-//        int randomIndex;
-//        int workerId;
-//        for (Range range : ranges) {
-//            if (!range.isFixed()) {
-//                randomIndex = (int) (Math.random() * range.workers.size());
-//                workerId = range.workers.get(randomIndex).id;
-//                range.setFixedWorker(workerId);
-//                //LP1
-//                applyOneWorkerInShift();
-//                //LP2
-//                CheckIfShiftIsLastOfWeekAndApplyLP2(positionInWeek);
-//
-//                break;
-//            }
-//        }
-//    }
-//    public void setRandomSeniorWorkerInRandomRangeOfMorningShift(int positionInWeek) {
-//        for (Range range : ranges) {
-//            if (!range.isFixed() && range.exists(WorkerType.SENIOR)) {
-//                List<Worker> seniorWorkers = range.getSeniorWorkers();
-//
-//                int randomIndex = (int) (Math.random() * seniorWorkers.size());
-//                range.setFixedWorker(seniorWorkers.get(randomIndex).id);
-//                //seniorWorkers.get(randomIndex).id
-//                //LP1
-//                applyOneWorkerInShift();
-//                //LP2
-//                CheckIfShiftIsLastOfWeekAndApplyLP2(positionInWeek);
-//                break;
-//            }
-//        }
-//    }
-//
+
+    public void setRandomWorkerInAnyNotFixedRangeAndApplyLPs(int positionInWeek) {
+        int randomIndex;
+        int workerId;
+        for (Range range : ranges) {
+            if (!range.isFixed()) {
+                randomIndex = (int) (Math.random() * range.workers.size());
+                workerId = range.workers.get(randomIndex).id;
+                range.setFixedWorker(workerId);
+                //LP1
+                applyOneWorkerInShift();
+                //LP2
+                CheckIfShiftIsLastOfWeekAndApplyLP2(positionInWeek);
+
+                break;
+            }
+        }
+    }
+
+    public void setRandomSeniorWorkerInRandomRangeOfMorningShift(int positionInWeek) {
+        for (Range range : ranges) {
+            if (!range.isFixed() && range.exists(WorkerType.SENIOR)) {
+                List<Worker> seniorWorkers = range.getSeniorWorkers();
+
+                int randomIndex = (int) (Math.random() * seniorWorkers.size());
+                range.setFixedWorker(seniorWorkers.get(randomIndex).id);
+                //seniorWorkers.get(randomIndex).id
+                //LP1
+                applyOneWorkerInShift();
+                //LP2
+                CheckIfShiftIsLastOfWeekAndApplyLP2(positionInWeek);
+                break;
+            }
+        }
+    }
+
     public boolean hasEmptyRange() {
         for (Range range : ranges) {
             if (range.workers.isEmpty()) return true;
@@ -189,11 +172,11 @@ public class Shift {
         return false;
     }
 
-//    public void CheckIfShiftIsLastOfWeekAndApplyLP2(int positionInWeek) {
-//        if (positionInWeek < WeekScheduler.CurrentWeek.solutionList.size() - 1) {
-//            removeWorkersFromContinuousShift(WeekScheduler.CurrentWeek.solutionList.get(positionInWeek + 1));
-//        }
-//    }
+    public void CheckIfShiftIsLastOfWeekAndApplyLP2(int positionInWeek) {
+        if (positionInWeek < WeekScheduler.CurrentWeek.solutionList.size() - 1) {
+            removeWorkersFromContinuousShift(WeekScheduler.CurrentWeek.solutionList.get(positionInWeek + 1));
+        }
+    }
 
 
     public void print() {

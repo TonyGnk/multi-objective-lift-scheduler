@@ -6,6 +6,9 @@ fun main() {
 
     //test3()
 
-    //testWeeklyScheduler1()
+    val scheduler = WeekScheduler()
+    val weekSolved = scheduler.ProgramGenerator()
+    weekSolved.print()
+
 
 }
