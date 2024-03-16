@@ -10,18 +10,18 @@ import helper_functions.WorkerType
 fun getWorkers(): List<Worker> {
     return listOf(
         // SU: 0, Seniors: 1,2,3
-        Worker("Γιαννακοβίτης", Gender.MALE, WorkerType.SU),
-        Worker("Καρυτόπουλος", Gender.MALE, WorkerType.SENIOR),
-        Worker("Σιδηρόπουλος", Gender.MALE, WorkerType.SENIOR),
-        Worker("Στογιάννου", Gender.MALE, WorkerType.SENIOR),
-        Worker("Μαυροκεφαλίδου", Gender.FEMALE, WorkerType.STAFF),
-        Worker("Γραμμένας", Gender.MALE, WorkerType.STAFF),
-        Worker("Παπαστεγίου", Gender.MALE, WorkerType.STAFF),
-        Worker("Συροπούλου", Gender.FEMALE, WorkerType.STAFF),
-        Worker("Βασιλειάδη", Gender.MALE, WorkerType.STAFF),
-        Worker("Λουκίδου", Gender.FEMALE, WorkerType.STAFF),
-        Worker("Μαλλού", Gender.FEMALE, WorkerType.STAFF),
-        Worker("Χατζοπούλου", Gender.FEMALE, WorkerType.STAFF)
+        Worker("Γιαννακοβίτης", Gender.MALE, WorkerType.SU),//0
+        Worker("Καρυτόπουλος", Gender.MALE, WorkerType.SENIOR),//1
+        Worker("Σιδηρόπουλος", Gender.MALE, WorkerType.SENIOR), //2
+        Worker("Στογιάννου", Gender.MALE, WorkerType.SENIOR), //3
+        Worker("Μαυροκεφαλίδου", Gender.FEMALE, WorkerType.STAFF), //4
+        Worker("Γραμμένας", Gender.MALE, WorkerType.STAFF), //5
+        Worker("Παπαστεγίου", Gender.MALE, WorkerType.STAFF), //6
+        Worker("Συροπούλου", Gender.FEMALE, WorkerType.STAFF), //7
+        Worker("Βασιλειάδη", Gender.MALE, WorkerType.STAFF), //8
+        Worker("Λουκίδου", Gender.FEMALE, WorkerType.STAFF), //9
+        Worker("Μαλλού", Gender.FEMALE, WorkerType.STAFF), //10
+        Worker("Χατζοπούλου", Gender.FEMALE, WorkerType.STAFF) //11
     )
 }
 

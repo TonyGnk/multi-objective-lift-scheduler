@@ -15,9 +15,9 @@ An isolate sheduler algorithm developed with Java and Kotlin designed for `AI Cl
 #
 
 1. Download the Jetbrains Intelij Idea from [here](https://www.jetbrains.com/idea/)
-2. Clone the repository 
+2. Clone the repository
 
 ## Branch Instructions
 
-1.  `main` - The main branch for testing and debugging
-2.  `release` - The branch for more permanent code
+1. `main` - The main branch for testing and debugging
+2. `release` - The branch for more permanent code

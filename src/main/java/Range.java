@@ -65,7 +65,7 @@ public class Range {
         });
     }
 
-    public <T> int getNumberGender(Gender gender) {
+    public int getNumberGender(Gender gender) {
         int count = 0;
         for (Worker worker : workers) {
             if (worker.gender == gender) {
@@ -82,6 +82,12 @@ public class Range {
         return -1;
     }
 
+    public List<Integer> collectWorkersWithGender(Gender gender) {
+        return workers.stream().filter(worker -> worker.gender == gender)
+                .map(worker -> worker.id)
+                .collect(Collectors.toList());
+    }
+
     public void print() {
         System.out.println(getIds());
     }
@@ -90,13 +96,5 @@ public class Range {
         return AskKotlinForHelpKt.combineIds(this);
     }
 
-    public void tryToSolve() {
-        for (Worker worker : workers) {
-            if (canBeFixedWorker(worker.id)) {
-                setFixedWorker(worker.id);
-                break;
-            }
-        }
-    }
 
 }

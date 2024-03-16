@@ -1,5 +1,4 @@
 import helper_functions.Day;
-import helper_functions.Gender;
 import helper_functions.Time;
 import helper_functions.WorkerType;
 import manager_blocks.RangesNumber;
@@ -16,7 +15,6 @@ public class Shift {
     public final Time time;
     public final Day day;
 
-
     public Shift(int day, Time time) {
         this.day = getDayType(day);
         this.time = time;
@@ -29,16 +27,6 @@ public class Shift {
         this(1, Time.MORNING);
     }
 
-
-//    public void setWorkerInAnyNotFixedRange(int workerId) {
-//        for (Range range : ranges) {
-//            if (!range.isFixed()) {
-//                range.setFixedWorker(workerId);
-//                break;
-//            }
-//        }
-//    }
-
     public boolean setWorkerInAnyNotFixedRange(int workerId) {
         for (Range range : ranges) {
             if (!range.isFixed() && range.canBeFixedWorker(workerId)) {
@@ -49,34 +37,6 @@ public class Shift {
         return false;
     }
 
-
-    public <T> boolean exists(T attribute) {
-        return ranges.stream().anyMatch(range -> {
-            if (attribute instanceof WorkerType) {
-                return range.exists(attribute);
-            } else if (attribute instanceof Gender) {
-                return range.exists(attribute);
-            }
-            return false;
-        });
-    }
-
-    public int getFirstGenderId(Gender gender) {
-        for (Range range : ranges) {
-            if (range.exists(gender)) {
-                return range.getFirstGenderId(gender);
-            }
-        }
-        return -1;
-    }
-
-    public boolean onlyOneGender(Gender gender) {
-        int count = 0;
-        for (Range range : ranges) {
-            count += range.getNumberGender(gender);
-        }
-        return count == 1;
-    }
 
     public void applyOneWorkerInShift() {
         for (Range currentRange : ranges) {
@@ -121,12 +81,8 @@ public class Shift {
         return ranges.stream().allMatch(Range::isFixed);
     }
 
-    public boolean isFixed(int workerId) {
-        return ranges.stream().anyMatch(range -> range.exists(workerId) && range.isFixed());
-    }
-
-    public boolean isFixed(WorkerType type) {
-        return ranges.stream().anyMatch(range -> range.exists(type) && range.isFixed());
+    public <T> boolean isFixed(T attribute) {
+        return ranges.stream().anyMatch(range -> range.exists(attribute) && range.isFixed());
     }
 
 

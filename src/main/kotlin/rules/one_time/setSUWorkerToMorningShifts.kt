@@ -2,6 +2,7 @@ package rules.one_time
 
 import Week
 import helper_functions.Time
+import printGreen
 import workersRemainingWorkTimes
 
 /**
@@ -23,7 +24,7 @@ fun setSUWorkerToMorningShifts(week: Week, showMessages: Boolean) {
     }
 
     if (showMessages) {
-        println("SU worker has been set to the morning shifts")
+        printGreen("\nSU worker has been set to the morning shifts")
         week.print()
     }
 }

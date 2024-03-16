@@ -1,3 +1,5 @@
 fun main() {
-    solveWeek(Week(), false)
+    val solvedWeek = solveWeek(Week(), true)
+
+    //TODO checkForAnyViolation(solvedWeek)
 }
