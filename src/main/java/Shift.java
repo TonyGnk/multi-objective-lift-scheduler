@@ -76,6 +76,10 @@ public class Shift {
         }
     }
 
+    public boolean hasAnyFixedWorker() {
+        return ranges.stream().anyMatch(Range::isFixed);
+    }
+
 
     public boolean isFixed() {
         return ranges.stream().allMatch(Range::isFixed);
