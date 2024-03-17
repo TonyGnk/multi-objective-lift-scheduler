@@ -65,23 +65,6 @@ public class Range {
         });
     }
 
-    public int getNumberGender(Gender gender) {
-        int count = 0;
-        for (Worker worker : workers) {
-            if (worker.gender == gender) {
-                count++;
-            }
-        }
-        return count;
-    }
-
-    public int getFirstGenderId(Gender gender) {
-        for (Worker worker : workers) {
-            if (worker.gender == gender) return worker.id;
-        }
-        return -1;
-    }
-
     public List<Integer> collectWorkersWithGender(Gender gender) {
         return workers.stream().filter(worker -> worker.gender == gender)
                 .map(worker -> worker.id)

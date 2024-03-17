@@ -12,7 +12,8 @@ import rules.one_time.setSeniorOnEveryMorning
  */
 fun solveWeek(week: Week, showMessages: Boolean = false): Week {
     applyOneTimeRules(week, showMessages)
-    //week.print()
+
+    //for
 
     //applyRules(week)
 

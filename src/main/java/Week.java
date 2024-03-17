@@ -55,11 +55,6 @@ public class Week {
         return new ArrayList<>();
     }
 
-//    public boolean checkIfExistSeniorWorkerInMorningTime() {
-//        return collectShiftsWithTime(Time.MORNING).stream()
-//                .anyMatch(sift -> sift.exists());
-//    }
-
 
     public void print() {
         AskKotlinForHelpKt.weekPrinter(this);
