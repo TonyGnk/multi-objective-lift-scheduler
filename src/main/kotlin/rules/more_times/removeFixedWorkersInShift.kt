@@ -2,6 +2,7 @@ package rules.more_times
 
 import Range
 import Week
+import printGreen
 
 /**
  * This function removes the workers from the ranges that are fixed
@@ -28,9 +29,21 @@ fun removeFixedWorkersInShift(week: Week, showMessages: Boolean): Int {
             }
         }
     }
+
+    if (showMessages) {
+        printGreen("\nThe fixed workers have been removed in all others ranges. Total changes: $hasMadeChange")
+        week.print()
+    }
+
     return hasMadeChange
 }
 
+/**
+ * This function removes the worker from the ranges that are not the same with the range
+ * @param range The range to be solved
+ * @param ranges The list of ranges
+ * @return The number of changes made
+ */
 fun removeWorker(range: Range, ranges: List<Range>): Int {
     var hasMadeChange = 0
     val idOfFixedWorker = range.firstWorkerId
