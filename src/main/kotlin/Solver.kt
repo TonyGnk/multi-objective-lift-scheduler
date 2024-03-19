@@ -1,3 +1,4 @@
+import rules.more_times.removeFixedWorkersInShift
 import rules.one_time.setBothGenderInMorningShifts
 import rules.one_time.setSUWorkerToMorningShifts
 import rules.one_time.setSeniorOnEveryMorning
@@ -12,10 +13,7 @@ import rules.one_time.setSeniorOnEveryMorning
  */
 fun solveWeek(week: Week, showMessages: Boolean = false): Week {
     applyOneTimeRules(week, showMessages)
-
-    //for
-
-    //applyRules(week)
+    applyMultipleTimeRules(week, showMessages)
 
     //If is solution return
     return week
@@ -34,4 +32,12 @@ fun applyOneTimeRules(week: Week, showMessages: Boolean) {
     setSUWorkerToMorningShifts(week, showMessages)
     setSeniorOnEveryMorning(week, showMessages)
     setBothGenderInMorningShifts(week, showMessages)
+}
+
+fun applyMultipleTimeRules(week: Week, showMessages: Boolean) {
+    var n = 1
+    while (n != 0) {
+        n = 0
+        n += removeFixedWorkersInShift(week, showMessages)
+    }
 }
