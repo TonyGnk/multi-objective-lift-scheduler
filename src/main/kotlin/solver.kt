@@ -15,7 +15,6 @@ fun solveWeek(week: Week, showMessages: Boolean = false): Week {
     applyOneTimeRules(week, showMessages)
     applyMultipleTimeRules(week, showMessages)
 
-
     //If is solution return
     return week
 
