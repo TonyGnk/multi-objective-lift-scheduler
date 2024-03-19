@@ -41,14 +41,15 @@ public class Shift {
     public void applyOneWorkerInShift() {
         for (Range currentRange : ranges) {
             if (currentRange.isFixed()) {
-                removeFixedWorkerFromRanges(currentRange);
+                int idOfFixedWorker = currentRange.getFirstWorkerId();
+                removeFixedWorkerFromRanges(idOfFixedWorker, currentRange);
             }
         }
     }
 
-    private void removeFixedWorkerFromRanges(Range workersRange
+    private void removeFixedWorkerFromRanges(
+            int idOfFixedWorker, Range workersRange
     ) {
-        int idOfFixedWorker = workersRange.getFirstWorkerId();
         for (Range otherRange : ranges) {
             if (otherRange != workersRange
                     && otherRange.exists(idOfFixedWorker)) {
@@ -73,10 +74,6 @@ public class Shift {
                 range.removeWorker(id);
             }
         }
-    }
-
-    public boolean hasAnyFixedWorker() {
-        return ranges.stream().anyMatch(Range::isFixed);
     }
 
 
