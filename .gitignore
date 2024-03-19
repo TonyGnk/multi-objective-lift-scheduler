@@ -9,13 +9,10 @@ build/
 .idea/
 .idea/copilot
 .idea/copilot/chatSessions
-.idea/copilot/*
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
 *.iws
-\.xd
-\.idea/copilot/chatSessions/00000000000.xd
 *.iml
 *.ipr
 out/
