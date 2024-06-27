@@ -5,16 +5,41 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+    <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27387b15-b6e2-43e2-a841-5c78a54b4ff0" name="Changes" comment="Fix build script for JitPack">
+    <list default="true" id="27387b15-b6e2-43e2-a841-5c78a54b4ff0" name="Changes" comment="A small for getFirst method not available in Java">
+      <change afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/Gender.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/Range.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/Role.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/Shift.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/Time.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/Worker.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/WorkerDayType.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/WorkerPreference.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Range.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Range.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Week.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Worker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper_functions/Gender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper_functions/Gender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper_functions/Time.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper_functions/Time.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper_functions/WorkerType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper_functions/WorkerType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/MainN.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/MainN.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/askKotlinForHelp.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/askKotlinForHelp.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/manager_blocks/RangesNumber.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/manager_blocks/RangesNumber.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/rules/more_times/removeFixedWorkersInShift.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/rules/more_times/removeFixedWorkersInShift.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -47,11 +72,13 @@
         <option value="XML Properties File" />
         <option value="Interface" />
         <option value="package-info" />
-        <option value="Kotlin Class" />
         <option value="Class" />
         <option value="JUnit5 Test Class" />
         <option value="Enum" />
         <option value="Kotlin File" />
+        <option value="Kotlin Class" />
+        <option value="Kotlin Enum" />
+        <option value="Kotlin Data Class" />
       </list>
     </option>
   </component>
@@ -76,12 +103,12 @@
     &quot;assignee&quot;: &quot;TonyGnk&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/TonyGnk/multi-objective-lift-scheduler.git&quot;,
-    &quot;accountId&quot;: &quot;9ed9b0ac-ce68-4ef7-9736-0a2cd561b236&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/TonyGnk/multi-objective-lift-scheduler.git",
+    "accountId": "96216d57-a207-4159-9418-2f78eeae1b67"
   }
-}</component>
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/Week.java" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -100,6 +127,7 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
@@ -115,19 +143,24 @@
     "Kotlin.Unnamed.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/DEV/AndroidStudio/multi-objective-lift-scheduler/src/test/java",
+    "last_opened_file_path": "C:/DEV/Android Studio/compose-lift-scheduler/config/detekt/detekt.yml",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "rearrange.code.on.save": "true",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+    "settings.editor.selected.configurable": "preferences.detekt"
   },
   "keyToStringList": {
     "kotlin-gradle-user-dirs": [
@@ -230,11 +263,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <option name="filePath" />
       <method v="2">
@@ -275,7 +303,7 @@
       <workItem from="1709208211317" duration="13005000" />
       <workItem from="1709487741127" duration="14690000" />
       <workItem from="1719487761764" duration="70000" />
-      <workItem from="1719487858024" duration="897000" />
+      <workItem from="1719487858024" duration="2580000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <option name="closed" value="true" />
@@ -429,7 +457,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719488288276</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="A small for getFirst method not available in Java">
+      <option name="closed" value="true" />
+      <created>1719488825307</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1719488825307</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -463,7 +499,8 @@
     <MESSAGE value="Implementation of Rule 4 and Rule 5" />
     <MESSAGE value="Changes on GetWorkers, getWorkersLatestId() to reset the latestid to zero" />
     <MESSAGE value="Fix build script for JitPack" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix build script for JitPack" />
+    <MESSAGE value="A small for getFirst method not available in Java" />
+    <option name="LAST_COMMIT_MESSAGE" value="A small for getFirst method not available in Java" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

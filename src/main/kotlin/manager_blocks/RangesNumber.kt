@@ -1,7 +1,7 @@
 package manager_blocks
 
 import helper_functions.Day
-import helper_functions.Time
+import model.Time
 
 fun getDayType(day: Int): Day {
     return if (day == 0 || day % 7 == 0 || day % 7 == 6) Day.WEEKEND

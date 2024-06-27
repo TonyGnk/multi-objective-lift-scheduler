@@ -1,7 +1,7 @@
 package rules.more_times
 
-import Range
 import Week
+import model.Range
 import printGreen
 
 /**
@@ -46,7 +46,7 @@ fun removeFixedWorkersInShift(week: Week, showMessages: Boolean): Int {
  */
 fun removeWorker(range: Range, ranges: List<Range>): Int {
     var hasMadeChange = 0
-    val idOfFixedWorker = range.firstWorkerId
+    val idOfFixedWorker = range.getFirstWorkerId()
 
     for (otherRange in ranges) {
         if (otherRange !== range
