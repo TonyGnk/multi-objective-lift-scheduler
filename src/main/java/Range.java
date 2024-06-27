@@ -3,6 +3,7 @@ import helper_functions.WorkerType;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
 
 public class Range {
@@ -21,7 +22,11 @@ public class Range {
     }
 
     public int getFirstWorkerId() {
-        return workers.getFirst().id;
+        if (!workers.isEmpty()) {
+            return workers.get(0).id;
+        } else {
+            throw new NoSuchElementException("No elements in the workers list");
+        }
     }
 
     public void removeWorker(int idForRemove) {

@@ -8,8 +8,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27387b15-b6e2-43e2-a841-5c78a54b4ff0" name="Changes" comment="Changes on GetWorkers, getWorkersLatestId() to reset the latestid to zero">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="27387b15-b6e2-43e2-a841-5c78a54b4ff0" name="Changes" comment="Fix build script for JitPack">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Range.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Range.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,12 +76,12 @@
     &quot;assignee&quot;: &quot;TonyGnk&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/TonyGnk/multi-objective-lift-scheduler.git",
-    "accountId": "9ed9b0ac-ce68-4ef7-9736-0a2cd561b236"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/TonyGnk/multi-objective-lift-scheduler.git&quot;,
+    &quot;accountId&quot;: &quot;9ed9b0ac-ce68-4ef7-9736-0a2cd561b236&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/Week.java" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -101,6 +101,7 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showScratchesAndConsoles" value="false" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
@@ -115,7 +116,6 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "android.gradle.sync.needed": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "main",
@@ -128,6 +128,11 @@
     "rearrange.code.on.save": "true",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  },
+  "keyToStringList": {
+    "kotlin-gradle-user-dirs": [
+      "C:\\Users\\USER\\.gradle"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -225,6 +230,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Gradle.WeekSchedulerTest.programmGenerator" />
       <item itemvalue="Gradle.WeekSchedulerTest.ProgrammGenerator" />
@@ -259,6 +275,7 @@
       <workItem from="1709208211317" duration="13005000" />
       <workItem from="1709487741127" duration="14690000" />
       <workItem from="1719487761764" duration="70000" />
+      <workItem from="1719487858024" duration="897000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <option name="closed" value="true" />
@@ -404,7 +421,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709923598261</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Fix build script for JitPack">
+      <option name="closed" value="true" />
+      <created>1719488288275</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1719488288276</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -419,6 +444,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Commit" />
     <MESSAGE value="First Commit" />
     <MESSAGE value="Create the foundation of the project" />
@@ -435,7 +462,8 @@
     <MESSAGE value="Implementation of Rule 4" />
     <MESSAGE value="Implementation of Rule 4 and Rule 5" />
     <MESSAGE value="Changes on GetWorkers, getWorkersLatestId() to reset the latestid to zero" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes on GetWorkers, getWorkersLatestId() to reset the latestid to zero" />
+    <MESSAGE value="Fix build script for JitPack" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix build script for JitPack" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
