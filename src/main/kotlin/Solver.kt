@@ -1,43 +1,82 @@
-import rules.more_times.removeFixedWorkersInShift
-import rules.one_time.setBothGenderInMorningShifts
-import rules.one_time.setSUWorkerToMorningShifts
-import rules.one_time.setSeniorOnEveryMorning
+import model.Gender
+import model.Range
+import model.Time
+import model.existsRangeWithOnlyGender
+import old.printBlue
 
-/**
- * This function is the central function of the project
- * It calls all the rules and apply them to the week
- *
- * @param week The week to be solved
- * @param showMessages A boolean to show the debug messages or not
- * @return The solved week
- */
-fun solveWeek(week: Week, showMessages: Boolean = false): Week {
-    applyOneTimeRules(week, showMessages)
-    applyMultipleTimeRules(week, showMessages)
+fun liftSchedulerSearch(
+    ranges: MutableList<Range>
+): SearchResult {
+    var updatedListIndexes = mutableListOf<Int>()
 
-    //If is solution return
-    return week
+    println("Start Searching...")
 
-    //If is not solution, set a random value and apply the rules again
+    printBlue("Optimizing Problem...")
+    previousFunction(ranges)
+    printBlue("\n")
+
+    updatedListIndexes = setSUInMorningsRule(ranges)
+
+    printBlue("Optimizing Problem...")
+    previousFunction(ranges, updatedListIndexes)
+    printBlue("\n")
+
+    updatedListIndexes = setEveryGenderInMorningRule(ranges)
+
+    printBlue("Optimizing Problem...")
+    previousFunction(ranges, updatedListIndexes)
+    printBlue("\n")
+
+
+    if (ranges.any { it.isEmpty() }) return SearchResult.RangesWithNoWorkers
+
+    return SearchResult.Success(ranges)
 }
 
-/**
- * This function call all the one-time rules
- *
- * @param week The week for which the one-time rules are to be applied
- * @param showMessages A boolean to show the debug messages or not
- * @return Nothing
- */
-fun applyOneTimeRules(week: Week, showMessages: Boolean) {
-    setSUWorkerToMorningShifts(week, showMessages)
-    setSeniorOnEveryMorning(week, showMessages)
-    setBothGenderInMorningShifts(week, showMessages)
-}
+fun setEveryGenderInMorningRule(ranges: MutableList<Range>): MutableList<Int> {
+    val updatedIndexes = mutableListOf<Int>()
 
-fun applyMultipleTimeRules(week: Week, showMessages: Boolean) {
-    var n = 1
-    while (n != 0) {
-        n = 0
-        n += removeFixedWorkersInShift(week, showMessages)
+    //Collect all the morning moments
+    val morningMoments = ranges.filter { it.moment.time == Time.MORNING }.map { it.moment }
+
+    morningMoments.forEach { currentMoment ->
+        val rangesWithMoment = ranges.filter { it.moment == currentMoment }.toMutableList()
+
+        if (rangesWithMoment.size >= 1) {
+            val possibleMales: Int? = rangesWithMoment.existsRangeWithOnlyGender(Gender.MALE)
+            val possibleFemales: Int? = rangesWithMoment.existsRangeWithOnlyGender(Gender.FEMALE)
+
+//            if (possibleMales != null && possibleFemales == null) {
+//                rangesWithMoment.removeAt(possibleMales)
+//                rangesWithMoment[0].setGenderOnly(Gender.FEMALE)
+//                updatedIndexes.add(rangesWithMoment[0].id)
+//            }
+
+            if (possibleFemales == null) {
+                rangesWithMoment[1].setGenderOnly(Gender.FEMALE)
+                updatedIndexes.add(rangesWithMoment[1].id)
+            }
+        }
     }
+
+    return updatedIndexes
+}
+
+fun setSUInMorningsRule(ranges: MutableList<Range>): MutableList<Int> {
+    val updatedIndexes = mutableListOf<Int>()
+
+    val morningMoments = ranges.filter { it.moment.time == Time.MORNING }.map { it.moment }
+    val suId = "1"
+    var availableWorkTimes = 5
+
+    morningMoments.forEach { currentMoment ->
+        if (availableWorkTimes > 0) {
+            val rangesWithMoment = ranges.filter { it.moment == currentMoment }.toMutableList()
+            rangesWithMoment[0].setWorker(suId)
+            updatedIndexes.add(rangesWithMoment[0].id)
+            availableWorkTimes--
+        }
+    }
+
+    return updatedIndexes
 }
