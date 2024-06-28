@@ -8,30 +8,54 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27387b15-b6e2-43e2-a841-5c78a54b4ff0" name="Changes" comment="A small for getFirst method not available in Java">
-      <change afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/Gender.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/Range.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/Role.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/Shift.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/Time.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/Worker.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/WorkerDayType.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/WorkerPreference.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="27387b15-b6e2-43e2-a841-5c78a54b4ff0" name="Changes" comment="Code refinement">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/IterateAndOptimize.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/States.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Visualize.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/createInitialList.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/createProblem.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/examples/ExampleList.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/examples/Workers.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/examples/numberOfRangesMap.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/Moment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/SearchInput.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/old/WeekPrinter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/old/askKotlinForHelp.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/old/rules/moreTimes/removeFixedWorkersInShift.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/old/rules/oneTime/fixWorkersToShiftsRandomly.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/old/rules/oneTime/setBothGendersInMorningShifts.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/old/rules/oneTime/setSUWorkerToMorningShifts.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/old/rules/oneTime/setSeniorOnEveryMorning.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/old/test_rules/testRL2.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/old/test_rules/testRl1.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Range.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Range.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Shift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shift.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Week.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Worker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/helper_functions/Gender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper_functions/Gender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/helper_functions/Time.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper_functions/Time.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/helper_functions/WorkerType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper_functions/WorkerType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/MainN.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/MainN.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/askKotlinForHelp.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/askKotlinForHelp.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/manager_blocks/RangesNumber.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/manager_blocks/RangesNumber.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/rules/more_times/removeFixedWorkersInShift.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/rules/more_times/removeFixedWorkersInShift.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WeekScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WeekScheduler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/MainN.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Solver.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Solver.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/WeekPrinter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/askKotlinForHelp.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/manager_blocks/ApplyRules.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/old/manager_blocks/ApplyRules.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/manager_blocks/RangesNumber.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/old/manager_blocks/RangesNumber.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/Range.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/Range.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/Shift.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/Shift.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/Time.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/Time.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/Worker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/Worker.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/WorkerDayType.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/WorkerPreference.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/rules/more_times/removeFixedWorkersInShift.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/rules/one_time/fixWorkersToShiftsRandomly.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/rules/one_time/setBothGendersInMorningShifts.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/rules/one_time/setSUWorkerToMorningShifts.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/rules/one_time/setSeniorOnEveryMorning.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/test_rules/testRL2.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/test_rules/testRL3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/old/test_rules/testRL3.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/test_rules/testRL4.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/old/test_rules/testRL4.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/test_rules/testRl1.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/test_rules/testWeeklyScheduler1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/old/test_rules/testWeeklyScheduler1.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,10 +99,10 @@
         <option value="Class" />
         <option value="JUnit5 Test Class" />
         <option value="Enum" />
-        <option value="Kotlin File" />
-        <option value="Kotlin Class" />
         <option value="Kotlin Enum" />
         <option value="Kotlin Data Class" />
+        <option value="Kotlin File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -103,12 +127,12 @@
     &quot;assignee&quot;: &quot;TonyGnk&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/TonyGnk/multi-objective-lift-scheduler.git",
-    "accountId": "96216d57-a207-4159-9418-2f78eeae1b67"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/TonyGnk/multi-objective-lift-scheduler.git&quot;,
+    &quot;accountId&quot;: &quot;96216d57-a207-4159-9418-2f78eeae1b67&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/Week.java" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -126,7 +150,6 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
@@ -160,7 +183,7 @@
     "project.structure.side.proportion": "0.2",
     "rearrange.code.on.save": "true",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.detekt"
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Console Font"
   },
   "keyToStringList": {
     "kotlin-gradle-user-dirs": [
@@ -174,6 +197,9 @@
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\USER\IdeaProjects\multi-objective-lift-scheduler\src\main\kotlin\old" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
@@ -465,7 +491,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719488825307</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Code refinement">
+      <option name="closed" value="true" />
+      <created>1719496204323</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1719496204323</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -500,7 +534,8 @@
     <MESSAGE value="Changes on GetWorkers, getWorkersLatestId() to reset the latestid to zero" />
     <MESSAGE value="Fix build script for JitPack" />
     <MESSAGE value="A small for getFirst method not available in Java" />
-    <option name="LAST_COMMIT_MESSAGE" value="A small for getFirst method not available in Java" />
+    <MESSAGE value="Code refinement" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code refinement" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
