@@ -1,74 +1,34 @@
 package model
 
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.update
+class Range(
+    val id: Int,
+    val possibleWorkers: MutableList<Worker>,
+    val moment: Moment,
+) {
 
-class Range(initialWorkers: List<Worker>) {
+    fun setWorker(workerId: String) {
+        possibleWorkers.removeIf { it.id != workerId }
+    }
 
-    private val workers = MutableStateFlow<List<Worker>>(initialWorkers)
+    fun isEmpty(): Boolean {
+        return possibleWorkers.isEmpty()
+    }
 
-    fun isFixed(): Boolean = workers.value.size == 1
+    fun setGenderOnly(gender: Gender) {
+        possibleWorkers.removeIf { it.gender != gender }
+    }
 
-    fun removeWorker(workerId: String) {
-        workers.update {
-            it.filter { worker -> worker.id != workerId }
+    fun hasOnly(gender: Gender): Boolean {
+        return possibleWorkers.all { it.gender == gender }
+    }
+}
+
+
+fun MutableList<Range>.existsRangeWithOnlyGender(gender: Gender): Int? {
+    this.forEach {
+        if (it.hasOnly(gender)) {
+            return it.id
         }
     }
-
-    fun getFirstWorkerId(): String {
-        return workers.value.first().id
-    }
-
-
-    fun canBeFixedWorker(id: String): Boolean {
-        //val dayOfRule: Boolean = workersRemainingWorkTimes[id] > 0
-        val genderRuleA: Boolean = exists(Gender.MALE)
-        val genderRuleB: Boolean = exists(Gender.FEMALE)
-
-        return genderRuleA && genderRuleB
-    }
-
-    fun setFixedWorker(fixedWorkerId: String) {
-        workers.update {
-            it.filter { worker -> worker.id == fixedWorkerId }
-        }
-        //val currentTimes: Int = workersRemainingWorkTimes[fixedWorkerId]
-        //TODO workersRemainingWorkTimes[fixedWorkerId] = currentTimes - 1
-    }
-
-
-    fun getSeniorWorkers(): List<String> {
-        return workers.value.filter { worker -> worker.type == Role.SENIOR }
-            .map { worker -> worker.id }
-    }
-
-    fun <T> exists(attribute: T): Boolean {
-        val workerList = workers.value
-        return workerList.any { worker ->
-            when (attribute) {
-                is Gender -> worker.gender == attribute
-                is Role -> worker.type == attribute
-                is String -> worker.id == attribute
-                else -> {
-                    throw IllegalArgumentException("Attribute not supported")
-                }
-            }
-        }
-    }
-
-    fun collectWorkersWithGender(gender: Gender): List<String> {
-        return workers.value.filter { worker ->
-            worker.gender == gender
-        }.map { worker -> worker.id }
-    }
-
-//
-//    fun print() {
-//        println(ids)
-//    }
-//
-//    val ids: StringBuilder
-//        get() {
-//            return combineIds(this)
-//        }
+    return null
 }

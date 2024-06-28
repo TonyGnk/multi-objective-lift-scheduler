@@ -5,14 +5,14 @@
 //import java.util.NoSuchElementException;
 //import java.util.stream.Collectors;
 //
-//public class Range {
+//public class model.Range {
 //    public List<Worker> workers;
 //
-//    public Range() {
+//    public model.Range() {
 //        workers = AskKotlinForHelpKt.getWorkers();
 //    }
 //
-//    public Range(List<Worker> workers) {
+//    public model.Range(List<Worker> workers) {
 //        workers = new ArrayList<>(workers);
 //    }
 //
