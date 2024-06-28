@@ -1,5 +1,7 @@
 package model
 
-enum class Time {
-    MORNING, AFTERNOON, NIGHT
+enum class Time(val next: String) {
+    NIGHT("MORNING"),
+    MORNING("AFTERNOON"),
+    AFTERNOON("NIGHT")
 }

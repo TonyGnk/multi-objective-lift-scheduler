@@ -9,7 +9,7 @@
 //import static manager_blocks.RangesNumberKt.getListTimeFrom;
 //
 //public class Week {
-//    public final List<Shift> solutionList = new ArrayList<>();
+//    public final List<model.Shift> solutionList = new ArrayList<>();
 //    public final int days;
 //
 //    public Week(Time startFrom, Time endTime, int startDay, int days) {
@@ -20,7 +20,7 @@
 //            for (Time time : times) {
 //                if (i == days - 1 && time == endTime) continue;
 //
-//                solutionList.add(new Shift(i, time));
+//                solutionList.add(new model.Shift(i, time));
 //            }
 //            times = getListTimeFrom(Time.MORNING);
 //        }
@@ -38,13 +38,13 @@
 //
 //
 //    public boolean CheckForUnsolvableWeek() {
-//        for (Shift sift : solutionList) {
+//        for (model.Shift sift : solutionList) {
 //            if (sift.hasEmptyRange()) return true;
 //        }
 //        return false;
 //    }
 //
-//    public <T> List<Shift> collectShiftsWith(T attribute) {
+//    public <T> List<model.Shift> collectShiftsWith(T attribute) {
 //        if (attribute instanceof Day) {
 //            return solutionList.stream().filter(sift -> sift.day == attribute)
 //                    .collect(Collectors.toList());
