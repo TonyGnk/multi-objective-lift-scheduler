@@ -1,7 +1,7 @@
-import model.Gender
-import model.Range
-import model.Time
-import model.existsRangeWithOnlyGender
+import com.tonyGnk.core.model.scheduler.Range
+import com.tonyGnk.core.model.scheduler.existsRangeWithOnlyGender
+import com.tonyGnk.core.model.time.Time
+import com.tonyGnk.core.model.worker.Gender
 import old.printBlue
 
 fun liftSchedulerSearch(

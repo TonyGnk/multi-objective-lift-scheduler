@@ -1,7 +1,8 @@
+import com.tonyGnk.core.model.scheduler.ProblemResult
+import com.tonyGnk.core.model.scheduler.Range
+import com.tonyGnk.core.model.scheduler.SearchInput
+import com.tonyGnk.core.model.time.next
 import examples.numberOfRangesMap
-import model.Range
-import model.SearchInput
-import model.next
 import old.printOrange
 
 fun createProblem(input: SearchInput): ProblemResult {
@@ -33,8 +34,4 @@ fun createProblem(input: SearchInput): ProblemResult {
     //list[0].setWorker(input.workers[0].id)
 
     return ProblemResult.Success(list)
-}
-
-sealed class ProblemResult {
-    data class Success(val problem: MutableList<Range>) : ProblemResult()
 }

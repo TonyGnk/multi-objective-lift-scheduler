@@ -1,6 +1,7 @@
 package old
 
-import model.Time
+import com.tonyGnk.core.model.time.Time
+
 
 //import helper_functions.Day
 //import helper_functions.Time

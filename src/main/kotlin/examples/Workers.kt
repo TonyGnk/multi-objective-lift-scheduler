@@ -1,8 +1,8 @@
 package examples
 
-import model.Gender
-import model.Role
-import model.Worker
+import com.tonyGnk.core.model.worker.Gender
+import com.tonyGnk.core.model.worker.Role
+import com.tonyGnk.core.model.worker.Worker
 
 val workersPreSet: List<Worker> = listOf(
     Worker(id = "1", name = "Γιαννακοβίτης", gender = Gender.MALE, role = Role.SU),

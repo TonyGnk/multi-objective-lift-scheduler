@@ -1,7 +1,7 @@
 package old.manager_blocks
 
+import com.tonyGnk.core.model.time.Time
 import helper_functions.Day
-import model.Time
 
 fun getDayType(day: Int): Day {
     return if (day == 0 || day % 7 == 0 || day % 7 == 6) Day.WEEKEND

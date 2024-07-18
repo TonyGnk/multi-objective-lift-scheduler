@@ -1,7 +1,7 @@
 package examples
 
+import com.tonyGnk.core.model.time.Time
 import kotlinx.datetime.DayOfWeek
-import model.Time
 
 val numberOfRangesMap: Map<Pair<DayOfWeek, Time>, Int> = mapOf(
     Pair(DayOfWeek.MONDAY, Time.MORNING) to 3,

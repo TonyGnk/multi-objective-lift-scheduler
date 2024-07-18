@@ -1,6 +1,6 @@
-import model.Range
-import model.next
-import model.previous
+import com.tonyGnk.core.model.scheduler.Range
+import com.tonyGnk.core.model.time.next
+import com.tonyGnk.core.model.time.previous
 import old.printBlue
 
 

@@ -1,9 +1,9 @@
 package examples
 
+import com.tonyGnk.core.model.scheduler.SearchInput
+import com.tonyGnk.core.model.time.Moment
+import com.tonyGnk.core.model.time.Time
 import kotlinx.datetime.toLocalDate
-import model.Moment
-import model.SearchInput
-import model.Time
 
 val exampleOneDay = SearchInput(
     start = Moment("2024-07-01".toLocalDate(), Time.NIGHT),

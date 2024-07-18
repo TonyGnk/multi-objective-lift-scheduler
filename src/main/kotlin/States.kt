@@ -1,5 +1,5 @@
-import model.Range
-import model.Worker
+import com.tonyGnk.core.model.scheduler.Range
+import com.tonyGnk.core.model.worker.Worker
 
 fun initializeWorkersLimits(workers: List<Worker>): MutableMap<String, Int> {
     val workerLimits: MutableMap<String, Int> = mutableMapOf()

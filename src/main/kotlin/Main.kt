@@ -1,3 +1,4 @@
+import com.tonyGnk.core.model.scheduler.ProblemResult
 import examples.exampleTwoDays
 
 fun main() {
