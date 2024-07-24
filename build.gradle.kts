@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.cls.jvm.library)
+    alias(libs.plugins.jetbrains.kotlin.plugin.serialization)
 }
 
 dependencies {
