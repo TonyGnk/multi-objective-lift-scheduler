@@ -22,14 +22,14 @@ val workersPreSet: List<Worker> = listOf(
     Worker(
         id = "3",
         name = "Michael",
-        surname = "Johnson",
+        surname = "Worcestershire",
         gender = Gender.MALE,
         role = Role.SENIOR
     ),
     Worker(
         id = "4",
         name = "Emily",
-        surname = "Davis",
+        surname = "Johnson",
         gender = Gender.FEMALE,
         role = Role.SENIOR
     ),
