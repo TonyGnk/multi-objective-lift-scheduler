@@ -4,27 +4,27 @@ import old.printBlue
 import old.printDef
 import old.printOrange
 
-fun MutableList<Range>.print() {
-    this.forEach {
-        printPerTime("${it.id} -  [", it.moment.time)
-        it.possibleWorkers.forEach { worker ->
-            printPerTime(
-                worker.id + if (it.possibleWorkers.last() != worker) ", " else "", it.moment.time
-            )
-        }
-        printPerTime("]  ${it.moment.date}", it.moment.time)
-        println()
-    }
-}
+//fun MutableList<Range>.print() {
+//    this.forEach {
+//        printPerTime("[", it.time)
+//        it.possibleWorkers.forEach { worker ->
+//            printPerTime(
+//                worker.id + if (it.possibleWorkers.last() != worker) ", " else "", it.time
+//            )
+//        }
+//        printPerTime("]  ${it.date}", it.time)
+//        println()
+//    }
+//}
 
-fun MutableList<Range>.toText(): String {
+fun List<Range>.toText(): String {
     var result = ""
     this.forEach {
-        result += "${it.id} -  ["
+        result += "["
         it.possibleWorkers.forEach { worker ->
             result += worker.id + if (it.possibleWorkers.last() != worker) ", " else ""
         }
-        result += "]  ${it.moment.date}\n"
+        result += "]  ${it.moment}\n"
     }
     return result
 }

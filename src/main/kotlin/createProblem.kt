@@ -1,27 +1,27 @@
 import com.tonyGnk.core.model.scheduler.ProblemResult
 import com.tonyGnk.core.model.scheduler.Range
 import com.tonyGnk.core.model.scheduler.SearchInput
+import com.tonyGnk.core.model.scheduler.numberOfRangesMapPreset
 import com.tonyGnk.core.model.time.next
-import examples.numberOfRangesMap
 import old.printOrange
 
-fun createProblem(input: SearchInput): ProblemResult {
-    printOrange("Create problem for ${input.start.date} ${input.start.time} - ${input.end.date} ${input.end.time}\n")
+fun createScheduleProblem(searchInput: SearchInput): ProblemResult {
+    printOrange("Create problem for ${searchInput.start.date} ${searchInput.start.time} - ${searchInput.end.date} ${searchInput.end.time}\n")
 
     val list = mutableListOf<Range>()
     var id = 0
-    var currentMoment = input.start
+    var currentMoment = searchInput.start
 
-    while (currentMoment != input.end.next()) {
+    while (currentMoment != searchInput.end.next()) {
         val dayOfWeek = currentMoment.date.dayOfWeek
-        val numberOfRanges = numberOfRangesMap[Pair(dayOfWeek, currentMoment.time)] ?: 0
+        val numberOfRanges = numberOfRangesMapPreset[Pair(dayOfWeek, currentMoment.time)] ?: 0
         printOrange("For ${currentMoment.date} ${currentMoment.time} add $numberOfRanges ranges\n")
 
         for (i in 0 until numberOfRanges) {
             list.add(
                 Range(
                     id = id,
-                    possibleWorkers = input.workers.toMutableList(),
+                    possibleWorkers = searchInput.workers.toMutableList(),
                     moment = currentMoment
                 )
             )
